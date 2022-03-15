@@ -30,3 +30,19 @@ C:\Users\definitely not me\Source\Repos\jirmusovic\IVS_projekt2\src\obj\Debug\ne
 C:\Users\definitely not me\Source\Repos\jirmusovic\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.dll
 C:\Users\definitely not me\Source\Repos\jirmusovic\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.pdb
 C:\Users\definitely not me\Source\Repos\jirmusovic\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.genruntimeconfig.cache
+D:\IVS2\IVS_projekt2\src\bin\Debug\netcoreapp3.1\Calc.exe
+D:\IVS2\IVS_projekt2\src\bin\Debug\netcoreapp3.1\Calc.deps.json
+D:\IVS2\IVS_projekt2\src\bin\Debug\netcoreapp3.1\Calc.runtimeconfig.json
+D:\IVS2\IVS_projekt2\src\bin\Debug\netcoreapp3.1\Calc.runtimeconfig.dev.json
+D:\IVS2\IVS_projekt2\src\bin\Debug\netcoreapp3.1\Calc.dll
+D:\IVS2\IVS_projekt2\src\bin\Debug\netcoreapp3.1\Calc.pdb
+D:\IVS2\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.csproj.AssemblyReference.cache
+D:\IVS2\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.Form1.resources
+D:\IVS2\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.csproj.GenerateResource.cache
+D:\IVS2\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.GeneratedMSBuildEditorConfig.editorconfig
+D:\IVS2\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.AssemblyInfoInputs.cache
+D:\IVS2\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.AssemblyInfo.cs
+D:\IVS2\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.csproj.CoreCompileInputs.cache
+D:\IVS2\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.dll
+D:\IVS2\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.pdb
+D:\IVS2\IVS_projekt2\src\obj\Debug\netcoreapp3.1\Calc.genruntimeconfig.cache
