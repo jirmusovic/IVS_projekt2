@@ -1,0 +1,30 @@
+IVS Projekt 2 - WISe Team - xjirmu00, xmothe00, xnovak3g, xkostr09
+
+1. Termíny
+
+15.3.2022 - První schůzka, kompletace plánu
+31.3.2022 - Výběr matematických operací, testy
+14.4.2022 - Kód + GUI
+21.4.2022 - makeFile
+22.-27.4.2022 - Testování
+28.4.2022 - Odevzdání projektu
+
+
+2. Přidělení úkolů jednotlivým členům
+
+xjirmu00, xnovak3g - Výběr matematických operací
+xkostr09, xmothe00 - Testy
+Všichni členové pod vedením xnovak3G - Kód 
+xjirmu00 - GUI
+xjirmu00 - makeFile
+Všichni členové - Závěrečné testování
+
+
+3. Komunikační kanály
+
+Trello - sledování splnění úkolů
+Discord - komunikace mezi členy
+
+
+4. Repozitář
+GITHUB: https://github.com/jirmusovic/IVS_projekt2 (pristup povolen pro ivskontrola)
