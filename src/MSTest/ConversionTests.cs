@@ -14,7 +14,6 @@ namespace MSTest
             var convert = new Conversion();
             // Act
             var result = convert.Convert_from_to("256", "10", "8");
-            Console.WriteLine(result);
             // Assert
             Assert.IsTrue(result == "400");
         }
@@ -23,7 +22,6 @@ namespace MSTest
         {
             var convert = new Conversion();
             var result = convert.Convert_from_to("M", "10", "8");
-            Console.WriteLine(result);
             Assert.IsTrue(result == null);
         }
 
@@ -32,7 +30,6 @@ namespace MSTest
         {
             var convert = new Conversion();
             var result = convert.Convert_from_to("1111100000111110000011111", "2", "10");
-            Console.WriteLine(result);
             Assert.IsTrue(result == "32537631");
         }
 
@@ -41,7 +38,6 @@ namespace MSTest
         {
             var convert = new Conversion();
             var result = convert.Convert_from_to("1111100000111210000011111", "2", "10");
-            Console.WriteLine(result);
             Assert.IsTrue(result == null);
         }
 
@@ -50,7 +46,6 @@ namespace MSTest
         {
             var convert = new Conversion();
             var result = convert.Convert_from_to("ff89e", "16", "2");
-            Console.WriteLine(result);
             Assert.IsTrue(result == "11111111100010011110");
         }
 
@@ -59,7 +54,6 @@ namespace MSTest
         {
             var convert = new Conversion();
             var result = convert.Convert_from_to("ZZZ", "16", "2");
-            Console.WriteLine(result);
             Assert.IsTrue(result == null);
         }
 
@@ -68,7 +62,6 @@ namespace MSTest
         {
             var convert = new Conversion();
             var result = convert.Convert_from_to("aabcabbbaacbbbbbb54aaaaaabbbbc6587493217485248517856285561256", "13", "31");
-            Console.WriteLine(result);
             string expected = "5nghnu0odjq22qt0c5n99iok77sqmdlc1n6p4k2hmccntj";
 
             Assert.IsTrue(result == expected.ToUpper());
@@ -79,7 +72,6 @@ namespace MSTest
         {
             var convert = new Conversion();
             var result = convert.Convert_from_to("g18", "24", "9");
-            Console.WriteLine(result);
             Assert.IsTrue(result == "13615");
         }
 
@@ -88,7 +80,6 @@ namespace MSTest
         {
             var convert = new Conversion();
             var result = convert.Convert_from_to("Z1313", "35", "36");
-            Console.WriteLine(result);
             Assert.IsTrue(result == null);
         }
 
@@ -97,7 +88,6 @@ namespace MSTest
         {
             var convert = new Conversion();
             var result = convert.Convert_from_to("10", "10", "654");
-            Console.WriteLine(result);
             Assert.IsTrue(result == null);
         }
 
