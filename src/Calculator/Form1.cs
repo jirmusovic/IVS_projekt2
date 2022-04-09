@@ -12,14 +12,26 @@ namespace Calc
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private string deviation_input;
+        public Form1(string input)
         {
+            deviation_input = input;
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (deviation_input != null)
+            {
+                //prepnuti okna na zalozku smerodatne odchylky
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "Working just fine here";
+            
         }
+
+        
     }
 }
