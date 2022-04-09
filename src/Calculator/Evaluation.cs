@@ -8,7 +8,7 @@ namespace Calc
     {
         public string Evaluate()
         {
-            return null;
+            return "";
         }
     }
 }
