@@ -28,7 +28,8 @@ namespace Calc
             }
             else
             {
-                textBox1.Text = "INPUT NOT GIVEN";
+                var conv = new Conversion();
+                textBox1.Text = conv.Convert_from_to("256", "10", "8");
             }
         }
 

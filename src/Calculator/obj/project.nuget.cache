@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+ioCKrXlLU9gHOra8JrWbsnTRBtz6jZ88+nIdYdiBsamKn0d8icFRheBFhPZjomDwKEM1QELJvNpmIWSAiYOOw==",
+  "dgSpecHash": "1hEoJ6iRloPaP5ERElFuXMAJ/2IQnEJ6wrxW7r9T64esj0232NSr32VktI5eQd0NrtNzFh5mZsgo25AWhCjGZw==",
   "success": true,
-  "projectFilePath": "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj",
+  "projectFilePath": "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
