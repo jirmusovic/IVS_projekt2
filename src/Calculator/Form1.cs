@@ -21,9 +21,14 @@ namespace Calc
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (deviation_input != null)
+            if (deviation_input != String.Empty)
             {
+                textBox1.Text = "INPUT GIVEN";
                 //prepnuti okna na zalozku smerodatne odchylky
+            }
+            else
+            {
+                textBox1.Text = "INPUT NOT GIVEN";
             }
         }
 
