@@ -57,7 +57,6 @@ namespace Calc
                 return number10Base.ToString();
             }
         }
-
         private static int getIndexOf(char[] array, char find, int limit)
         {
             int i;
