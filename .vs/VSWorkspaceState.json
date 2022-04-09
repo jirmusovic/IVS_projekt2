@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\src",
-    "\\src\\Calculator",
-    "\\src\\MSTest"
+    ""
   ],
-  "SelectedNode": "\\src\\MSTest\\ConversionTests.cs",
+  "SelectedNode": "\\Calc.sln",
   "PreviewInSolutionExplorer": false
 }

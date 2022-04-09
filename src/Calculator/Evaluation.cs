@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Calc
 {
-    class Evaluation
+    public class Evaluation
     {
         public string Evaluate(string expression)
         {

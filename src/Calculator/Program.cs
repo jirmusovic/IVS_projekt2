@@ -18,8 +18,12 @@ namespace Calc
             string line;
             while((line = Console.ReadLine()) != null)
             {
-                input += " ";
+                if (input != String.Empty)
+                {
+                    input += ' ';
+                }
                 input += line.Trim('\n');
+                
             }
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();

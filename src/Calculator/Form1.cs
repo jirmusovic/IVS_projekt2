@@ -21,16 +21,12 @@ namespace Calc
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (deviation_input != String.Empty)
-            {
-                textBox1.Text = "INPUT GIVEN";
+
+             Deviation dev = new Deviation();
+             textBox1.Text = dev.StdDeviation(deviation_input);
+                //textBox1.Text = deviation_input;
                 //prepnuti okna na zalozku smerodatne odchylky
-            }
-            else
-            {
-                var conv = new Conversion();
-                textBox1.Text = conv.Convert_from_to("256", "10", "8");
-            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
