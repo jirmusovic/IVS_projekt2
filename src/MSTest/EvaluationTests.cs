@@ -50,9 +50,38 @@ namespace MSTest
             Assert.AreEqual(double.Parse(result3), 0.377358490566037735849, 0.0001);
 
             var result4 = eval.N_root("f(10000, 0.00000000000000000000000000000000000000000000000000000000001)");
-            Assert.AreEqual(result4, null);
-
-            
+            Assert.AreEqual(result4, null);   
         }
+
+        [TestMethod]
+        public void Factrial()
+        {
+            var eval = new Evaluation();
+            var result = eval.N_root("5!");
+            Assert.AreEqual(result, "120");
+
+            var result1 = eval.N_root("0!");
+            Assert.AreEqual(result1, "1");
+
+            var result2 = eval.N_root("X!");
+            Assert.AreEqual(result2, null);
+        }
+
+        [TestMethod]
+        public void Evaluation()
+        {
+            var eval = new Evaluation();
+            var result = eval.N_root("(8*9)+(1*4)!");
+            Assert.AreEqual(result, "96");
+
+            var result1 = eval.N_root("LASDASDASD");
+            Assert.AreEqual(result1, null);
+
+            var result2 = eval.N_root("(2*(7+2)-8+(2-1)^2)!");
+            Assert.AreEqual(result2, "39916800");
+
+
+        }
+
     }
 }
