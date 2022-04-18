@@ -80,6 +80,20 @@ namespace MSTest
             var result2 = eval.N_root("(2*(7+2)-8+(2-1)^2)!");
             Assert.AreEqual(result2, "39916800");
 
+            var result3 = eval.N_root("(2*(7+2)-8+(2-1)^2)!");
+            Assert.AreEqual(result3, "39916800");
+
+            var result4 = eval.N_root("(((((2*(7+2)-8+(2-1)^2)!");
+            Assert.AreEqual(result4, null);
+
+            var result5 = eval.N_root("(f(4, 2)!*8))^2");
+            Assert.AreEqual(result5, "256");
+
+            var result6 = eval.N_root("e^5");
+            Assert.AreEqual(double.Parse(result6), 148.413159103, 0.00001);
+
+
+
 
         }
 
