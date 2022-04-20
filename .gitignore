@@ -27,3 +27,11 @@
 *.exe
 *.out
 *.app
+
+
+#Folders
+/.vs
+/src/.vs/Calc
+/src/bin/Debug/netcoreapp3.1
+/src/obj/Debug/netcoreapp3.1
+/src/Calculator/bin/Debug/netcoreapp3.1/
