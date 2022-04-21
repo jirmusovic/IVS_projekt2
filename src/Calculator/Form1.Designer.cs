@@ -66,20 +66,20 @@ namespace Calc
             this.Div = new System.Windows.Forms.Button();
             this.PlusMinus = new System.Windows.Forms.Button();
             this.ClearAll = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Convert = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -582,38 +582,77 @@ namespace Calc
             this.ClearAll.Text = "CA";
             this.ClearAll.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9"});
-            this.comboBox1.Location = new System.Drawing.Point(58, 157);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 43;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.richTextBox2);
             this.groupBox2.Controls.Add(this.richTextBox1);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.Convert);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(340, 47);
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(592, 381);
             this.groupBox2.TabIndex = 44;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(374, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 15);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "To base";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(58, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 15);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "From base";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.Color.Aquamarine;
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.richTextBox2.Location = new System.Drawing.Point(58, 244);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBox2.Size = new System.Drawing.Size(437, 58);
+            this.richTextBox2.TabIndex = 77;
+            this.richTextBox2.Text = "out";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Aquamarine;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.richTextBox1.Location = new System.Drawing.Point(58, 52);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBox1.Size = new System.Drawing.Size(437, 58);
+            this.richTextBox1.TabIndex = 76;
+            this.richTextBox1.Text = "in";
+            // 
+            // Convert
+            // 
+            this.Convert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Convert.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Convert.Location = new System.Drawing.Point(235, 151);
+            this.Convert.Margin = new System.Windows.Forms.Padding(4);
+            this.Convert.Name = "Convert";
+            this.Convert.Size = new System.Drawing.Size(89, 33);
+            this.Convert.TabIndex = 61;
+            this.Convert.Text = "Convert";
+            this.Convert.UseVisualStyleBackColor = true;
             // 
             // comboBox2
             // 
@@ -626,94 +665,129 @@ namespace Calc
             "6",
             "7",
             "8",
-            "9"});
-            this.comboBox2.Location = new System.Drawing.Point(374, 157);
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"});
+            this.comboBox2.Location = new System.Drawing.Point(367, 157);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
+            this.comboBox2.Size = new System.Drawing.Size(128, 23);
             this.comboBox2.TabIndex = 44;
             // 
-            // button1
+            // comboBox1
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(240, 151);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 33);
-            this.button1.TabIndex = 61;
-            this.button1.Text = "0";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Aquamarine;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(58, 52);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.richTextBox1.Size = new System.Drawing.Size(437, 58);
-            this.richTextBox1.TabIndex = 76;
-            this.richTextBox1.Text = "in";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.Color.Aquamarine;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.richTextBox2.Location = new System.Drawing.Point(58, 244);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.richTextBox2.Size = new System.Drawing.Size(437, 58);
-            this.richTextBox2.TabIndex = 77;
-            this.richTextBox2.Text = "out";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 78;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(374, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 79;
-            this.label2.Text = "label2";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"});
+            this.comboBox1.Location = new System.Drawing.Point(58, 157);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(129, 23);
+            this.comboBox1.TabIndex = 43;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.textBox1);
             this.groupBox3.Controls.Add(this.richTextBox4);
             this.groupBox3.Controls.Add(this.richTextBox3);
-            this.groupBox3.Location = new System.Drawing.Point(167, 473);
+            this.groupBox3.Location = new System.Drawing.Point(167, 450);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(592, 381);
             this.groupBox3.TabIndex = 45;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
-            // richTextBox3
+            // button3
             // 
-            this.richTextBox3.BackColor = System.Drawing.Color.Aquamarine;
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.richTextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.richTextBox3.Location = new System.Drawing.Point(65, 22);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.richTextBox3.Size = new System.Drawing.Size(437, 58);
-            this.richTextBox3.TabIndex = 78;
-            this.richTextBox3.Text = "out";
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(435, 262);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(60, 38);
+            this.button3.TabIndex = 82;
+            this.button3.Text = "vypocti";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(346, 262);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 38);
+            this.button2.TabIndex = 81;
+            this.button2.Text = "vybr soub";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(65, 271);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(237, 23);
+            this.textBox1.TabIndex = 80;
             // 
             // richTextBox4
             // 
@@ -728,44 +802,24 @@ namespace Calc
             this.richTextBox4.TabIndex = 79;
             this.richTextBox4.Text = "in";
             // 
-            // textBox1
+            // richTextBox3
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 271);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(237, 23);
-            this.textBox1.TabIndex = 80;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(346, 262);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 38);
-            this.button2.TabIndex = 81;
-            this.button2.Text = "vybr soub";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(435, 262);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 38);
-            this.button3.TabIndex = 82;
-            this.button3.Text = "vypocti";
-            this.button3.UseVisualStyleBackColor = true;
+            this.richTextBox3.BackColor = System.Drawing.Color.Aquamarine;
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.richTextBox3.Location = new System.Drawing.Point(65, 22);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBox3.Size = new System.Drawing.Size(437, 58);
+            this.richTextBox3.TabIndex = 78;
+            this.richTextBox3.Text = "out";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1140, 857);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(1125, 874);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Deviation);
@@ -828,7 +882,7 @@ namespace Calc
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Convert;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button3;
