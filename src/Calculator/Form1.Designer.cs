@@ -31,7 +31,7 @@ namespace Calc
         {
             this.Calculator = new System.Windows.Forms.Button();
             this.Converter = new System.Windows.Forms.Button();
-            this.Divergence = new System.Windows.Forms.Button();
+            this.Deviation = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Input = new System.Windows.Forms.RichTextBox();
             this.output = new System.Windows.Forms.RichTextBox();
@@ -66,7 +66,23 @@ namespace Calc
             this.Div = new System.Windows.Forms.Button();
             this.PlusMinus = new System.Windows.Forms.Button();
             this.ClearAll = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Calculator
@@ -91,16 +107,16 @@ namespace Calc
             this.Converter.Text = "Converter";
             this.Converter.UseVisualStyleBackColor = true;
             // 
-            // Divergence
+            // Deviation
             // 
-            this.Divergence.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Divergence.Location = new System.Drawing.Point(102, 318);
-            this.Divergence.Margin = new System.Windows.Forms.Padding(4);
-            this.Divergence.Name = "Divergence";
-            this.Divergence.Size = new System.Drawing.Size(35, 109);
-            this.Divergence.TabIndex = 28;
-            this.Divergence.Text = "Divergence";
-            this.Divergence.UseVisualStyleBackColor = true;
+            this.Deviation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Deviation.Location = new System.Drawing.Point(102, 318);
+            this.Deviation.Margin = new System.Windows.Forms.Padding(4);
+            this.Deviation.Name = "Deviation";
+            this.Deviation.Size = new System.Drawing.Size(35, 109);
+            this.Deviation.TabIndex = 28;
+            this.Deviation.Text = "Deviation";
+            this.Deviation.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -566,13 +582,193 @@ namespace Calc
             this.ClearAll.Text = "CA";
             this.ClearAll.UseVisualStyleBackColor = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox1.Location = new System.Drawing.Point(58, 157);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 43;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.richTextBox2);
+            this.groupBox2.Controls.Add(this.richTextBox1);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Location = new System.Drawing.Point(340, 47);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(592, 381);
+            this.groupBox2.TabIndex = 44;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"});
+            this.comboBox2.Location = new System.Drawing.Point(374, 157);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 23);
+            this.comboBox2.TabIndex = 44;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(240, 151);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 33);
+            this.button1.TabIndex = 61;
+            this.button1.Text = "0";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Aquamarine;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.richTextBox1.Location = new System.Drawing.Point(58, 52);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBox1.Size = new System.Drawing.Size(437, 58);
+            this.richTextBox1.TabIndex = 76;
+            this.richTextBox1.Text = "in";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.Color.Aquamarine;
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.richTextBox2.Location = new System.Drawing.Point(58, 244);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBox2.Size = new System.Drawing.Size(437, 58);
+            this.richTextBox2.TabIndex = 77;
+            this.richTextBox2.Text = "out";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(58, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(374, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 15);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "label2";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.richTextBox4);
+            this.groupBox3.Controls.Add(this.richTextBox3);
+            this.groupBox3.Location = new System.Drawing.Point(167, 473);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(592, 381);
+            this.groupBox3.TabIndex = 45;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.BackColor = System.Drawing.Color.Aquamarine;
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.richTextBox3.Location = new System.Drawing.Point(65, 22);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBox3.Size = new System.Drawing.Size(437, 58);
+            this.richTextBox3.TabIndex = 78;
+            this.richTextBox3.Text = "out";
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.BackColor = System.Drawing.Color.Aquamarine;
+            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.richTextBox4.Location = new System.Drawing.Point(65, 317);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBox4.Size = new System.Drawing.Size(437, 58);
+            this.richTextBox4.TabIndex = 79;
+            this.richTextBox4.Text = "in";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(65, 271);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(237, 23);
+            this.textBox1.TabIndex = 80;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(346, 262);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 38);
+            this.button2.TabIndex = 81;
+            this.button2.Text = "vybr soub";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(435, 262);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(60, 38);
+            this.button3.TabIndex = 82;
+            this.button3.Text = "vypocti";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 795);
+            this.ClientSize = new System.Drawing.Size(1140, 857);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Divergence);
+            this.Controls.Add(this.Deviation);
             this.Controls.Add(this.Converter);
             this.Controls.Add(this.Calculator);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -580,6 +776,10 @@ namespace Calc
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -587,7 +787,7 @@ namespace Calc
         #endregion
         private System.Windows.Forms.Button Calculator;
         private System.Windows.Forms.Button Converter;
-        private System.Windows.Forms.Button Divergence;
+        private System.Windows.Forms.Button Deviation;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button Exp10;
         private System.Windows.Forms.Button RightBracket;
@@ -622,6 +822,20 @@ namespace Calc
         private System.Windows.Forms.Button ClearAll;
         private System.Windows.Forms.RichTextBox output;
         private System.Windows.Forms.RichTextBox Input;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox richTextBox3;
     }
 }
 
