@@ -21,13 +21,52 @@ namespace Calc
             return null;
         }
 
+        public double N_root(double x, double n)
+        {
+            return 0;
+        } 
+
         public string N_power(string expression)
         {
-            return null;
+            double x = 0;
+            double n = 0;
+
+            string[] values = expression.Split('^');
+            if (values.Length != 2)
+                return null;
+            if(double.TryParse(values[0], out x) == false)
+            {
+                return null;
+            }
+
+            if (double.TryParse(values[1], out n) == false)
+            {
+                return null;
+            }
+
+            double result = N_power(x, n);
+
+            return result.ToString();
+        }
+
+        public double N_power(double x, double n)
+        {
+            double result = 0;
+
+            result = x;
+            for (int i = 0; i < n-1; i++)
+            {
+                result *= x;
+            }
+           
+            return result;
         }
 
         public string Factorial(string expression)
         {
+
+
+
             return null;
         }
 
