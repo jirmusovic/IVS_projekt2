@@ -29,7 +29,7 @@ namespace Calc
         public string N_power(string expression)
         {
             double x = 0;
-            double n = 0;
+            int n = 0;
 
             string[] values = expression.Split('^');
             if (values.Length != 2)
@@ -39,7 +39,7 @@ namespace Calc
                 return null;
             }
 
-            if (double.TryParse(values[1], out n) == false)
+            if (int.TryParse(values[1], out n) == false)
             {
                 return null;
             }
@@ -49,7 +49,7 @@ namespace Calc
             return result.ToString();
         }
 
-        public double N_power(double x, double n)
+        public double N_power(double x, int n)
         {
             double result = 0;
 
