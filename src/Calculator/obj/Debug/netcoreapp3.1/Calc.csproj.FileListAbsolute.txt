@@ -78,3 +78,20 @@ C:\Users\mothv\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\net
 C:\Users\mothv\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.dll
 C:\Users\mothv\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.pdb
 C:\Users\mothv\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.genruntimeconfig.cache
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\bin\Debug\netcoreapp3.1\Calc.exe
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\bin\Debug\netcoreapp3.1\Calc.deps.json
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\bin\Debug\netcoreapp3.1\Calc.runtimeconfig.json
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\bin\Debug\netcoreapp3.1\Calc.runtimeconfig.dev.json
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\bin\Debug\netcoreapp3.1\Calc.dll
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\bin\Debug\netcoreapp3.1\Calc.pdb
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.csproj.AssemblyReference.cache
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.Form1.resources
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.csproj.GenerateResource.cache
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.AssemblyInfoInputs.cache
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.AssemblyInfo.cs
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.csproj.CoreCompileInputs.cache
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.dll
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.pdb
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.genruntimeconfig.cache
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.Properties.Resources.resources
