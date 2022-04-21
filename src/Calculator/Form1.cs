@@ -19,6 +19,31 @@ namespace Calc
             InitializeComponent();
         }
 
+        private void Calculator_Click(object sender, EventArgs e)
+        {
+            if(CalculatorGroupBox.Visible == true) return;
+            DeviationGroupBox.Visible = false;
+            ConverterGroupBox.Visible = false;
+            CalculatorGroupBox.Visible = true;
+            
+        }
+
+        private void Converter_Click(object sender, EventArgs e)
+        {
+            if (ConverterGroupBox.Visible == true) return;
+            DeviationGroupBox.Visible = false;
+            CalculatorGroupBox.Visible = false;
+            ConverterGroupBox.Visible = true;
+        }
+
+        private void Deviation_Click(object sender, EventArgs e)
+        {
+            if (DeviationGroupBox.Visible == true) return;
+            ConverterGroupBox.Visible = false;
+            CalculatorGroupBox.Visible = false;
+            DeviationGroupBox.Visible = true;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -29,6 +54,6 @@ namespace Calc
 
         }
 
-        
+       
     }
 }

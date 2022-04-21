@@ -32,24 +32,7 @@ namespace Calc
             this.Calculator = new System.Windows.Forms.Button();
             this.Converter = new System.Windows.Forms.Button();
             this.Deviation = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.DeviationGroupBox = new System.Windows.Forms.GroupBox();
-            this.LabelFileInput = new System.Windows.Forms.Label();
-            this.LabelOwnInput = new System.Windows.Forms.Label();
-            this.LabelOutput = new System.Windows.Forms.Label();
-            this.Calculate = new System.Windows.Forms.Button();
-            this.FileChoose = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.InDev = new System.Windows.Forms.RichTextBox();
-            this.OutDev = new System.Windows.Forms.RichTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.OutConvert = new System.Windows.Forms.RichTextBox();
-            this.InConvert = new System.Windows.Forms.RichTextBox();
-            this.Convert = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CalculatorGroupBox = new System.Windows.Forms.GroupBox();
             this.InputCalc = new System.Windows.Forms.RichTextBox();
             this.OutputCalc = new System.Windows.Forms.RichTextBox();
             this.Exp10 = new System.Windows.Forms.Button();
@@ -83,8 +66,25 @@ namespace Calc
             this.Div = new System.Windows.Forms.Button();
             this.PlusMinus = new System.Windows.Forms.Button();
             this.ClearAll = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.ConverterGroupBox = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.OutConvert = new System.Windows.Forms.RichTextBox();
+            this.InConvert = new System.Windows.Forms.RichTextBox();
+            this.Convert = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.DeviationGroupBox = new System.Windows.Forms.GroupBox();
+            this.LabelFileInput = new System.Windows.Forms.Label();
+            this.LabelOwnInput = new System.Windows.Forms.Label();
+            this.LabelOutput = new System.Windows.Forms.Label();
+            this.Calculate = new System.Windows.Forms.Button();
+            this.FileChoose = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.InDev = new System.Windows.Forms.RichTextBox();
+            this.OutDev = new System.Windows.Forms.RichTextBox();
+            this.CalculatorGroupBox.SuspendLayout();
+            this.ConverterGroupBox.SuspendLayout();
             this.DeviationGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +98,7 @@ namespace Calc
             this.Calculator.TabIndex = 26;
             this.Calculator.Text = "Calculator";
             this.Calculator.UseVisualStyleBackColor = true;
+            this.Calculator.Click += new System.EventHandler(this.Calculator_Click);
             // 
             // Converter
             // 
@@ -109,6 +110,7 @@ namespace Calc
             this.Converter.TabIndex = 27;
             this.Converter.Text = "Converter";
             this.Converter.UseVisualStyleBackColor = true;
+            this.Converter.Click += new System.EventHandler(this.Converter_Click);
             // 
             // Deviation
             // 
@@ -120,314 +122,49 @@ namespace Calc
             this.Deviation.TabIndex = 28;
             this.Deviation.Text = "Deviation";
             this.Deviation.UseVisualStyleBackColor = true;
+            this.Deviation.Click += new System.EventHandler(this.Deviation_Click);
             // 
-            // groupBox1
+            // CalculatorGroupBox
             // 
-            this.groupBox1.Controls.Add(this.InputCalc);
-            this.groupBox1.Controls.Add(this.OutputCalc);
-            this.groupBox1.Controls.Add(this.Exp10);
-            this.groupBox1.Controls.Add(this.RightBracket);
-            this.groupBox1.Controls.Add(this.LeftBracket);
-            this.groupBox1.Controls.Add(this.Exponent);
-            this.groupBox1.Controls.Add(this.Sqrt);
-            this.groupBox1.Controls.Add(this.Fact);
-            this.groupBox1.Controls.Add(this.Tan);
-            this.groupBox1.Controls.Add(this.Cos);
-            this.groupBox1.Controls.Add(this.Sin);
-            this.groupBox1.Controls.Add(this.Pi);
-            this.groupBox1.Controls.Add(this.Log);
-            this.groupBox1.Controls.Add(this.E);
-            this.groupBox1.Controls.Add(this.Backspace);
-            this.groupBox1.Controls.Add(this.Comma);
-            this.groupBox1.Controls.Add(this.Num0);
-            this.groupBox1.Controls.Add(this.Num1);
-            this.groupBox1.Controls.Add(this.Num4);
-            this.groupBox1.Controls.Add(this.Num7);
-            this.groupBox1.Controls.Add(this.Num2);
-            this.groupBox1.Controls.Add(this.Num5);
-            this.groupBox1.Controls.Add(this.Num8);
-            this.groupBox1.Controls.Add(this.Num3);
-            this.groupBox1.Controls.Add(this.Num6);
-            this.groupBox1.Controls.Add(this.Num9);
-            this.groupBox1.Controls.Add(this.Mul);
-            this.groupBox1.Controls.Add(this.Sub);
-            this.groupBox1.Controls.Add(this.Add);
-            this.groupBox1.Controls.Add(this.Eq);
-            this.groupBox1.Controls.Add(this.Div);
-            this.groupBox1.Controls.Add(this.PlusMinus);
-            this.groupBox1.Controls.Add(this.ClearAll);
-            this.groupBox1.Location = new System.Drawing.Point(167, 72);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(592, 381);
-            this.groupBox1.TabIndex = 42;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Calculator";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.OutConvert);
-            this.groupBox2.Controls.Add(this.InConvert);
-            this.groupBox2.Controls.Add(this.Convert);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Location = new System.Drawing.Point(610, 459);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(592, 381);
-            this.groupBox2.TabIndex = 44;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Converter";
-            this.groupBox2.Visible = false;
-            // 
-            // DeviationGroupBox
-            // 
-            this.DeviationGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.DeviationGroupBox.Controls.Add(this.LabelFileInput);
-            this.DeviationGroupBox.Controls.Add(this.LabelOwnInput);
-            this.DeviationGroupBox.Controls.Add(this.LabelOutput);
-            this.DeviationGroupBox.Controls.Add(this.Calculate);
-            this.DeviationGroupBox.Controls.Add(this.FileChoose);
-            this.DeviationGroupBox.Controls.Add(this.textBox1);
-            this.DeviationGroupBox.Controls.Add(this.InDev);
-            this.DeviationGroupBox.Controls.Add(this.OutDev);
-            this.DeviationGroupBox.Location = new System.Drawing.Point(12, 459);
-            this.DeviationGroupBox.Name = "DeviationGroupBox";
-            this.DeviationGroupBox.Size = new System.Drawing.Size(592, 381);
-            this.DeviationGroupBox.TabIndex = 45;
-            this.DeviationGroupBox.TabStop = false;
-            this.DeviationGroupBox.Text = "Deviation";
-            this.DeviationGroupBox.Visible = false;
-            // 
-            // LabelFileInput
-            // 
-            this.LabelFileInput.AutoSize = true;
-            this.LabelFileInput.Location = new System.Drawing.Point(65, 153);
-            this.LabelFileInput.Name = "LabelFileInput";
-            this.LabelFileInput.Size = new System.Drawing.Size(83, 15);
-            this.LabelFileInput.TabIndex = 85;
-            this.LabelFileInput.Text = "Input from file";
-            // 
-            // LabelOwnInput
-            // 
-            this.LabelOwnInput.AutoSize = true;
-            this.LabelOwnInput.Location = new System.Drawing.Point(65, 223);
-            this.LabelOwnInput.Name = "LabelOwnInput";
-            this.LabelOwnInput.Size = new System.Drawing.Size(63, 15);
-            this.LabelOwnInput.TabIndex = 84;
-            this.LabelOwnInput.Text = "Own input";
-            // 
-            // LabelOutput
-            // 
-            this.LabelOutput.AutoSize = true;
-            this.LabelOutput.Location = new System.Drawing.Point(65, 47);
-            this.LabelOutput.Name = "LabelOutput";
-            this.LabelOutput.Size = new System.Drawing.Size(45, 15);
-            this.LabelOutput.TabIndex = 83;
-            this.LabelOutput.Text = "Output";
-            // 
-            // Calculate
-            // 
-            this.Calculate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Calculate.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Calculate.Location = new System.Drawing.Point(435, 162);
-            this.Calculate.Margin = new System.Windows.Forms.Padding(4);
-            this.Calculate.Name = "Calculate";
-            this.Calculate.Size = new System.Drawing.Size(67, 38);
-            this.Calculate.TabIndex = 82;
-            this.Calculate.Text = "Calculate";
-            this.Calculate.UseVisualStyleBackColor = true;
-            // 
-            // FileChoose
-            // 
-            this.FileChoose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FileChoose.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.FileChoose.Location = new System.Drawing.Point(346, 162);
-            this.FileChoose.Margin = new System.Windows.Forms.Padding(4);
-            this.FileChoose.Name = "FileChoose";
-            this.FileChoose.Size = new System.Drawing.Size(64, 38);
-            this.FileChoose.TabIndex = 81;
-            this.FileChoose.Text = "Choose a file";
-            this.FileChoose.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Location = new System.Drawing.Point(65, 171);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(237, 23);
-            this.textBox1.TabIndex = 80;
-            // 
-            // InDev
-            // 
-            this.InDev.BackColor = System.Drawing.Color.Aquamarine;
-            this.InDev.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.InDev.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.InDev.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.InDev.Location = new System.Drawing.Point(65, 241);
-            this.InDev.Name = "InDev";
-            this.InDev.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.InDev.Size = new System.Drawing.Size(437, 50);
-            this.InDev.TabIndex = 79;
-            this.InDev.Text = "";
-            // 
-            // OutDev
-            // 
-            this.OutDev.BackColor = System.Drawing.Color.Aquamarine;
-            this.OutDev.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutDev.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.OutDev.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.OutDev.Location = new System.Drawing.Point(65, 65);
-            this.OutDev.Name = "OutDev";
-            this.OutDev.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.OutDev.Size = new System.Drawing.Size(437, 50);
-            this.OutDev.TabIndex = 78;
-            this.OutDev.Text = "";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(374, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 15);
-            this.label2.TabIndex = 79;
-            this.label2.Text = "To base";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 15);
-            this.label1.TabIndex = 78;
-            this.label1.Text = "From base";
-            // 
-            // OutConvert
-            // 
-            this.OutConvert.BackColor = System.Drawing.Color.Aquamarine;
-            this.OutConvert.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.OutConvert.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.OutConvert.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.OutConvert.Location = new System.Drawing.Point(58, 244);
-            this.OutConvert.Name = "OutConvert";
-            this.OutConvert.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.OutConvert.Size = new System.Drawing.Size(437, 50);
-            this.OutConvert.TabIndex = 77;
-            this.OutConvert.Text = "";
-            // 
-            // InConvert
-            // 
-            this.InConvert.BackColor = System.Drawing.Color.Aquamarine;
-            this.InConvert.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.InConvert.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.InConvert.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.InConvert.Location = new System.Drawing.Point(58, 52);
-            this.InConvert.Name = "InConvert";
-            this.InConvert.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.InConvert.Size = new System.Drawing.Size(437, 50);
-            this.InConvert.TabIndex = 76;
-            this.InConvert.Text = "";
-            // 
-            // Convert
-            // 
-            this.Convert.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Convert.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Convert.Location = new System.Drawing.Point(235, 151);
-            this.Convert.Margin = new System.Windows.Forms.Padding(4);
-            this.Convert.Name = "Convert";
-            this.Convert.Size = new System.Drawing.Size(89, 33);
-            this.Convert.TabIndex = 61;
-            this.Convert.Text = "Convert";
-            this.Convert.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36"});
-            this.comboBox2.Location = new System.Drawing.Point(367, 157);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(128, 23);
-            this.comboBox2.TabIndex = 44;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36"});
-            this.comboBox1.Location = new System.Drawing.Point(58, 157);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(129, 23);
-            this.comboBox1.TabIndex = 43;
+            this.CalculatorGroupBox.Controls.Add(this.InputCalc);
+            this.CalculatorGroupBox.Controls.Add(this.OutputCalc);
+            this.CalculatorGroupBox.Controls.Add(this.Exp10);
+            this.CalculatorGroupBox.Controls.Add(this.RightBracket);
+            this.CalculatorGroupBox.Controls.Add(this.LeftBracket);
+            this.CalculatorGroupBox.Controls.Add(this.Exponent);
+            this.CalculatorGroupBox.Controls.Add(this.Sqrt);
+            this.CalculatorGroupBox.Controls.Add(this.Fact);
+            this.CalculatorGroupBox.Controls.Add(this.Tan);
+            this.CalculatorGroupBox.Controls.Add(this.Cos);
+            this.CalculatorGroupBox.Controls.Add(this.Sin);
+            this.CalculatorGroupBox.Controls.Add(this.Pi);
+            this.CalculatorGroupBox.Controls.Add(this.Log);
+            this.CalculatorGroupBox.Controls.Add(this.E);
+            this.CalculatorGroupBox.Controls.Add(this.Backspace);
+            this.CalculatorGroupBox.Controls.Add(this.Comma);
+            this.CalculatorGroupBox.Controls.Add(this.Num0);
+            this.CalculatorGroupBox.Controls.Add(this.Num1);
+            this.CalculatorGroupBox.Controls.Add(this.Num4);
+            this.CalculatorGroupBox.Controls.Add(this.Num7);
+            this.CalculatorGroupBox.Controls.Add(this.Num2);
+            this.CalculatorGroupBox.Controls.Add(this.Num5);
+            this.CalculatorGroupBox.Controls.Add(this.Num8);
+            this.CalculatorGroupBox.Controls.Add(this.Num3);
+            this.CalculatorGroupBox.Controls.Add(this.Num6);
+            this.CalculatorGroupBox.Controls.Add(this.Num9);
+            this.CalculatorGroupBox.Controls.Add(this.Mul);
+            this.CalculatorGroupBox.Controls.Add(this.Sub);
+            this.CalculatorGroupBox.Controls.Add(this.Add);
+            this.CalculatorGroupBox.Controls.Add(this.Eq);
+            this.CalculatorGroupBox.Controls.Add(this.Div);
+            this.CalculatorGroupBox.Controls.Add(this.PlusMinus);
+            this.CalculatorGroupBox.Controls.Add(this.ClearAll);
+            this.CalculatorGroupBox.Location = new System.Drawing.Point(167, 72);
+            this.CalculatorGroupBox.Name = "CalculatorGroupBox";
+            this.CalculatorGroupBox.Size = new System.Drawing.Size(592, 381);
+            this.CalculatorGroupBox.TabIndex = 42;
+            this.CalculatorGroupBox.TabStop = false;
+            this.CalculatorGroupBox.Text = "Calculator";
             // 
             // InputCalc
             // 
@@ -851,24 +588,291 @@ namespace Calc
             this.ClearAll.Text = "CA";
             this.ClearAll.UseVisualStyleBackColor = false;
             // 
+            // ConverterGroupBox
+            // 
+            this.ConverterGroupBox.Controls.Add(this.label2);
+            this.ConverterGroupBox.Controls.Add(this.label1);
+            this.ConverterGroupBox.Controls.Add(this.OutConvert);
+            this.ConverterGroupBox.Controls.Add(this.InConvert);
+            this.ConverterGroupBox.Controls.Add(this.Convert);
+            this.ConverterGroupBox.Controls.Add(this.comboBox2);
+            this.ConverterGroupBox.Controls.Add(this.comboBox1);
+            this.ConverterGroupBox.Location = new System.Drawing.Point(610, 459);
+            this.ConverterGroupBox.Name = "ConverterGroupBox";
+            this.ConverterGroupBox.Size = new System.Drawing.Size(592, 381);
+            this.ConverterGroupBox.TabIndex = 44;
+            this.ConverterGroupBox.TabStop = false;
+            this.ConverterGroupBox.Text = "Converter";
+            this.ConverterGroupBox.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(374, 139);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 15);
+            this.label2.TabIndex = 79;
+            this.label2.Text = "To base";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(58, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 15);
+            this.label1.TabIndex = 78;
+            this.label1.Text = "From base";
+            // 
+            // OutConvert
+            // 
+            this.OutConvert.BackColor = System.Drawing.Color.Aquamarine;
+            this.OutConvert.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OutConvert.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.OutConvert.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.OutConvert.Location = new System.Drawing.Point(58, 244);
+            this.OutConvert.Name = "OutConvert";
+            this.OutConvert.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.OutConvert.Size = new System.Drawing.Size(437, 50);
+            this.OutConvert.TabIndex = 77;
+            this.OutConvert.Text = "";
+            // 
+            // InConvert
+            // 
+            this.InConvert.BackColor = System.Drawing.Color.Aquamarine;
+            this.InConvert.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.InConvert.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.InConvert.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.InConvert.Location = new System.Drawing.Point(58, 52);
+            this.InConvert.Name = "InConvert";
+            this.InConvert.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.InConvert.Size = new System.Drawing.Size(437, 50);
+            this.InConvert.TabIndex = 76;
+            this.InConvert.Text = "";
+            // 
+            // Convert
+            // 
+            this.Convert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Convert.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Convert.Location = new System.Drawing.Point(235, 151);
+            this.Convert.Margin = new System.Windows.Forms.Padding(4);
+            this.Convert.Name = "Convert";
+            this.Convert.Size = new System.Drawing.Size(89, 33);
+            this.Convert.TabIndex = 61;
+            this.Convert.Text = "Convert";
+            this.Convert.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"});
+            this.comboBox2.Location = new System.Drawing.Point(367, 157);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(128, 23);
+            this.comboBox2.TabIndex = 44;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36"});
+            this.comboBox1.Location = new System.Drawing.Point(58, 157);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(129, 23);
+            this.comboBox1.TabIndex = 43;
+            // 
+            // DeviationGroupBox
+            // 
+            this.DeviationGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DeviationGroupBox.Controls.Add(this.LabelFileInput);
+            this.DeviationGroupBox.Controls.Add(this.LabelOwnInput);
+            this.DeviationGroupBox.Controls.Add(this.LabelOutput);
+            this.DeviationGroupBox.Controls.Add(this.Calculate);
+            this.DeviationGroupBox.Controls.Add(this.FileChoose);
+            this.DeviationGroupBox.Controls.Add(this.textBox1);
+            this.DeviationGroupBox.Controls.Add(this.InDev);
+            this.DeviationGroupBox.Controls.Add(this.OutDev);
+            this.DeviationGroupBox.Location = new System.Drawing.Point(12, 459);
+            this.DeviationGroupBox.Name = "DeviationGroupBox";
+            this.DeviationGroupBox.Size = new System.Drawing.Size(592, 381);
+            this.DeviationGroupBox.TabIndex = 45;
+            this.DeviationGroupBox.TabStop = false;
+            this.DeviationGroupBox.Text = "Deviation";
+            this.DeviationGroupBox.Visible = false;
+            // 
+            // LabelFileInput
+            // 
+            this.LabelFileInput.AutoSize = true;
+            this.LabelFileInput.Location = new System.Drawing.Point(65, 153);
+            this.LabelFileInput.Name = "LabelFileInput";
+            this.LabelFileInput.Size = new System.Drawing.Size(83, 15);
+            this.LabelFileInput.TabIndex = 85;
+            this.LabelFileInput.Text = "Input from file";
+            // 
+            // LabelOwnInput
+            // 
+            this.LabelOwnInput.AutoSize = true;
+            this.LabelOwnInput.Location = new System.Drawing.Point(65, 223);
+            this.LabelOwnInput.Name = "LabelOwnInput";
+            this.LabelOwnInput.Size = new System.Drawing.Size(63, 15);
+            this.LabelOwnInput.TabIndex = 84;
+            this.LabelOwnInput.Text = "Own input";
+            // 
+            // LabelOutput
+            // 
+            this.LabelOutput.AutoSize = true;
+            this.LabelOutput.Location = new System.Drawing.Point(65, 47);
+            this.LabelOutput.Name = "LabelOutput";
+            this.LabelOutput.Size = new System.Drawing.Size(45, 15);
+            this.LabelOutput.TabIndex = 83;
+            this.LabelOutput.Text = "Output";
+            // 
+            // Calculate
+            // 
+            this.Calculate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Calculate.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Calculate.Location = new System.Drawing.Point(435, 162);
+            this.Calculate.Margin = new System.Windows.Forms.Padding(4);
+            this.Calculate.Name = "Calculate";
+            this.Calculate.Size = new System.Drawing.Size(67, 38);
+            this.Calculate.TabIndex = 82;
+            this.Calculate.Text = "Calculate";
+            this.Calculate.UseVisualStyleBackColor = true;
+            // 
+            // FileChoose
+            // 
+            this.FileChoose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FileChoose.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.FileChoose.Location = new System.Drawing.Point(346, 162);
+            this.FileChoose.Margin = new System.Windows.Forms.Padding(4);
+            this.FileChoose.Name = "FileChoose";
+            this.FileChoose.Size = new System.Drawing.Size(64, 38);
+            this.FileChoose.TabIndex = 81;
+            this.FileChoose.Text = "Choose a file";
+            this.FileChoose.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBox1.Location = new System.Drawing.Point(65, 171);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(237, 23);
+            this.textBox1.TabIndex = 80;
+            // 
+            // InDev
+            // 
+            this.InDev.BackColor = System.Drawing.Color.Aquamarine;
+            this.InDev.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.InDev.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.InDev.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.InDev.Location = new System.Drawing.Point(65, 241);
+            this.InDev.Name = "InDev";
+            this.InDev.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.InDev.Size = new System.Drawing.Size(437, 50);
+            this.InDev.TabIndex = 79;
+            this.InDev.Text = "";
+            // 
+            // OutDev
+            // 
+            this.OutDev.BackColor = System.Drawing.Color.Aquamarine;
+            this.OutDev.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OutDev.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.OutDev.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.OutDev.Location = new System.Drawing.Point(65, 65);
+            this.OutDev.Name = "OutDev";
+            this.OutDev.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.OutDev.Size = new System.Drawing.Size(437, 50);
+            this.OutDev.TabIndex = 78;
+            this.OutDev.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 874);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.ConverterGroupBox);
             this.Controls.Add(this.DeviationGroupBox);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.CalculatorGroupBox);
             this.Controls.Add(this.Deviation);
             this.Controls.Add(this.Converter);
             this.Controls.Add(this.Calculator);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.CalculatorGroupBox.ResumeLayout(false);
+            this.ConverterGroupBox.ResumeLayout(false);
+            this.ConverterGroupBox.PerformLayout();
             this.DeviationGroupBox.ResumeLayout(false);
             this.DeviationGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -879,7 +883,7 @@ namespace Calc
         private System.Windows.Forms.Button Calculator;
         private System.Windows.Forms.Button Converter;
         private System.Windows.Forms.Button Deviation;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox CalculatorGroupBox;
         private System.Windows.Forms.Button Exp10;
         private System.Windows.Forms.Button RightBracket;
         private System.Windows.Forms.Button LeftBracket;
@@ -914,7 +918,7 @@ namespace Calc
         private System.Windows.Forms.RichTextBox OutputCalc;
         private System.Windows.Forms.RichTextBox InputCalc;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox ConverterGroupBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox OutConvert;
