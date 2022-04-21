@@ -268,7 +268,7 @@ namespace Calc
             this.InDev.Location = new System.Drawing.Point(65, 241);
             this.InDev.Name = "InDev";
             this.InDev.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.InDev.Size = new System.Drawing.Size(437, 58);
+            this.InDev.Size = new System.Drawing.Size(437, 50);
             this.InDev.TabIndex = 79;
             this.InDev.Text = "";
             // 
@@ -281,7 +281,7 @@ namespace Calc
             this.OutDev.Location = new System.Drawing.Point(65, 65);
             this.OutDev.Name = "OutDev";
             this.OutDev.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.OutDev.Size = new System.Drawing.Size(437, 54);
+            this.OutDev.Size = new System.Drawing.Size(437, 50);
             this.OutDev.TabIndex = 78;
             this.OutDev.Text = "";
             // 
@@ -312,7 +312,7 @@ namespace Calc
             this.OutConvert.Location = new System.Drawing.Point(58, 244);
             this.OutConvert.Name = "OutConvert";
             this.OutConvert.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.OutConvert.Size = new System.Drawing.Size(437, 58);
+            this.OutConvert.Size = new System.Drawing.Size(437, 50);
             this.OutConvert.TabIndex = 77;
             this.OutConvert.Text = "";
             // 
@@ -325,7 +325,7 @@ namespace Calc
             this.InConvert.Location = new System.Drawing.Point(58, 52);
             this.InConvert.Name = "InConvert";
             this.InConvert.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.InConvert.Size = new System.Drawing.Size(437, 58);
+            this.InConvert.Size = new System.Drawing.Size(437, 50);
             this.InConvert.TabIndex = 76;
             this.InConvert.Text = "";
             // 
