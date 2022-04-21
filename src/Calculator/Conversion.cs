@@ -12,6 +12,10 @@ namespace Calc
         {
             int from = int.Parse(fromBase);
             int to = int.Parse(toBase);
+            if(from > 36 || to > 36)
+            {
+                return null;
+            }
 
             number = number.ToUpper();
 
@@ -28,7 +32,14 @@ namespace Calc
                     int num = getIndexOf(numList, temp, from);
                     if (num != -1)
                     {
-                        number10Base += num * Convert.ToInt32(Math.Pow(Convert.ToDouble(from), Convert.ToDouble(i)));
+                        try
+                        {
+                            number10Base += num * Convert.ToInt32(Math.Pow(Convert.ToDouble(from), Convert.ToDouble(i)));
+                        }
+                        catch
+                        {
+                            return null;
+                        }
                     }
                     else
                     {
@@ -39,7 +50,10 @@ namespace Calc
             }
             else
             {
-                number10Base = int.Parse(number);
+                if(int.TryParse(number, out number10Base) == false)
+                {
+                    return null;
+                }
             }
 
             if (to != 10)

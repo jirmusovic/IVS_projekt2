@@ -18,17 +18,78 @@ namespace Calc
 
         public string N_root(string expression)
         {
-            return null;
+            expression = expression.Replace(" ", String.Empty);
+
+            double x = 0;
+            double n = 0;
+
+            char[] startTrim = new char[] { 'f', '(' };
+
+            expression = expression.TrimStart(startTrim);
+            expression = expression.TrimEnd(')');
+            string[] values = expression.Split(',');
+            if (values.Length != 2)
+                return null;
+            if (double.TryParse(values[0], out x) == false)
+            {
+                return null;
+            }
+
+            if (double.TryParse(values[1], out n) == false)
+            {
+                return null;
+            }
+
+            return Math.Pow(x, 1.0 / n).ToString(); ;
         }
+
+
 
         public string N_power(string expression)
         {
-            return null;
+            expression = expression.Replace(" ", String.Empty);
+
+            double x = 0;
+            double n = 0;
+
+            string[] values = expression.Split('^');
+            if (values.Length != 2)
+                return null;
+            if(double.TryParse(values[0], out x) == false)
+            {
+                return null;
+            }
+
+            if (double.TryParse(values[1], out n) == false)
+            {
+                return null;
+            }
+
+
+            return Math.Pow(x, n).ToString(); ;
         }
+
 
         public string Factorial(string expression)
         {
-            return null;
+            expression = expression.Replace(" ", String.Empty);
+
+            int num = 0;
+            if (int.TryParse(expression.TrimEnd('!'), out num) == false){
+                return null;
+            }
+            if (num < 0)
+            {
+                return null;
+            }
+            int result = 1;
+            for(; num>0; num--)
+            {
+                result *= num;
+            }
+
+
+            return result.ToString();
         }
 
         private int GetCharIndexPos(string expression, char seeking)
