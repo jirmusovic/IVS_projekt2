@@ -54,6 +54,10 @@ namespace Calc
 
         }
 
-       
+        private void number_click(object sender, EventArgs e)
+        {
+            Button clicked = (Button)sender;
+            InputCalc.Text += clicked.Text;
+        }
     }
 }
