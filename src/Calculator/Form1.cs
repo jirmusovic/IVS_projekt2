@@ -28,5 +28,10 @@ namespace Calc
         {
             
         }
+
+        private void buttonClick(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

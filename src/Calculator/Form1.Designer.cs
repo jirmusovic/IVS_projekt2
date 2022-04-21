@@ -143,7 +143,6 @@ namespace Calc
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            this.groupBox1.Visible = false;
             // 
             // button11
             // 
@@ -340,6 +339,7 @@ namespace Calc
             this.Comma.TabIndex = 61;
             this.Comma.Text = ",";
             this.Comma.UseVisualStyleBackColor = true;
+            this.Comma.Click += new System.EventHandler(this.buttonClick);
             // 
             // Num0
             // 
@@ -353,6 +353,7 @@ namespace Calc
             this.Num0.TabIndex = 60;
             this.Num0.Text = "0";
             this.Num0.UseVisualStyleBackColor = true;
+            this.Num0.Click += new System.EventHandler(this.buttonClick);
             // 
             // Num1
             // 
@@ -366,6 +367,7 @@ namespace Calc
             this.Num1.TabIndex = 59;
             this.Num1.Text = "1";
             this.Num1.UseVisualStyleBackColor = true;
+            this.Num1.Click += new System.EventHandler(this.buttonClick);
             // 
             // Num4
             // 
@@ -379,6 +381,7 @@ namespace Calc
             this.Num4.TabIndex = 58;
             this.Num4.Text = "4";
             this.Num4.UseVisualStyleBackColor = true;
+            this.Num4.Click += new System.EventHandler(this.buttonClick);
             // 
             // Num7
             // 
@@ -392,6 +395,7 @@ namespace Calc
             this.Num7.TabIndex = 57;
             this.Num7.Text = "7";
             this.Num7.UseVisualStyleBackColor = true;
+            this.Num7.Click += new System.EventHandler(this.buttonClick);
             // 
             // Num2
             // 
@@ -405,6 +409,7 @@ namespace Calc
             this.Num2.TabIndex = 56;
             this.Num2.Text = "2";
             this.Num2.UseVisualStyleBackColor = true;
+            this.Num2.Click += new System.EventHandler(this.buttonClick);
             // 
             // Num5
             // 
@@ -418,6 +423,7 @@ namespace Calc
             this.Num5.TabIndex = 55;
             this.Num5.Text = "5";
             this.Num5.UseVisualStyleBackColor = true;
+            this.Num5.Click += new System.EventHandler(this.buttonClick);
             // 
             // Num8
             // 
@@ -431,6 +437,7 @@ namespace Calc
             this.Num8.TabIndex = 54;
             this.Num8.Text = "8";
             this.Num8.UseVisualStyleBackColor = true;
+            this.Num8.Click += new System.EventHandler(this.buttonClick);
             // 
             // Num3
             // 
@@ -444,6 +451,7 @@ namespace Calc
             this.Num3.TabIndex = 53;
             this.Num3.Text = "3";
             this.Num3.UseVisualStyleBackColor = true;
+            this.Num3.Click += new System.EventHandler(this.buttonClick);
             // 
             // Num6
             // 
@@ -457,6 +465,7 @@ namespace Calc
             this.Num6.TabIndex = 52;
             this.Num6.Text = "6";
             this.Num6.UseVisualStyleBackColor = true;
+            this.Num6.Click += new System.EventHandler(this.buttonClick);
             // 
             // Num9
             // 
@@ -470,6 +479,7 @@ namespace Calc
             this.Num9.TabIndex = 51;
             this.Num9.Text = "9";
             this.Num9.UseVisualStyleBackColor = true;
+            this.Num9.Click += new System.EventHandler(this.buttonClick);
             // 
             // Mul
             // 
@@ -483,6 +493,7 @@ namespace Calc
             this.Mul.TabIndex = 50;
             this.Mul.Text = "X";
             this.Mul.UseVisualStyleBackColor = false;
+            this.Mul.Click += new System.EventHandler(this.buttonClick);
             // 
             // Sub
             // 
@@ -496,6 +507,7 @@ namespace Calc
             this.Sub.TabIndex = 49;
             this.Sub.Text = "-";
             this.Sub.UseVisualStyleBackColor = false;
+            this.Sub.Click += new System.EventHandler(this.buttonClick);
             // 
             // Add
             // 
@@ -509,6 +521,7 @@ namespace Calc
             this.Add.TabIndex = 48;
             this.Add.Text = "+";
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.buttonClick);
             // 
             // Eq
             // 
@@ -535,6 +548,7 @@ namespace Calc
             this.Div.TabIndex = 46;
             this.Div.Text = "/";
             this.Div.UseVisualStyleBackColor = false;
+            this.Div.Click += new System.EventHandler(this.buttonClick);
             // 
             // PlusMinus
             // 

@@ -45,16 +45,16 @@ namespace MSTest
         }
 
         [TestMethod]
-        public void Factrial()
+        public void Factorial()
         {
             var eval = new Evaluation();
-            var result = eval.N_root("5!");
+            var result = eval.Factorial("5!");
             Assert.AreEqual("120", result);
 
-            var result1 = eval.N_root("0!");
+            var result1 = eval.Factorial("0!");
             Assert.AreEqual("1", result1);
 
-            var result2 = eval.N_root("X!");
+            var result2 = eval.Factorial("X!");
             Assert.AreEqual(null, result2);
         }
 
