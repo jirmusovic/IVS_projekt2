@@ -80,7 +80,7 @@ namespace Calc
             this.LabelOutput = new System.Windows.Forms.Label();
             this.Calculate = new System.Windows.Forms.Button();
             this.FileChoose = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FilePath = new System.Windows.Forms.TextBox();
             this.InDev = new System.Windows.Forms.RichTextBox();
             this.OutDev = new System.Windows.Forms.RichTextBox();
             this.CalculatorGroupBox.SuspendLayout();
@@ -770,7 +770,7 @@ namespace Calc
             this.DeviationGroupBox.Controls.Add(this.LabelOutput);
             this.DeviationGroupBox.Controls.Add(this.Calculate);
             this.DeviationGroupBox.Controls.Add(this.FileChoose);
-            this.DeviationGroupBox.Controls.Add(this.textBox1);
+            this.DeviationGroupBox.Controls.Add(this.FilePath);
             this.DeviationGroupBox.Controls.Add(this.InDev);
             this.DeviationGroupBox.Controls.Add(this.OutDev);
             this.DeviationGroupBox.Location = new System.Drawing.Point(12, 459);
@@ -819,6 +819,7 @@ namespace Calc
             this.Calculate.TabIndex = 82;
             this.Calculate.Text = "Calculate";
             this.Calculate.UseVisualStyleBackColor = true;
+            this.Calculate.Click += new System.EventHandler(this.Calculate_Click);
             // 
             // FileChoose
             // 
@@ -831,15 +832,16 @@ namespace Calc
             this.FileChoose.TabIndex = 81;
             this.FileChoose.Text = "Choose a file";
             this.FileChoose.UseVisualStyleBackColor = true;
+            this.FileChoose.Click += new System.EventHandler(this.FileChoose_Click);
             // 
-            // textBox1
+            // FilePath
             // 
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Location = new System.Drawing.Point(65, 171);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(237, 23);
-            this.textBox1.TabIndex = 80;
+            this.FilePath.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.FilePath.Location = new System.Drawing.Point(65, 171);
+            this.FilePath.Name = "FilePath";
+            this.FilePath.ReadOnly = true;
+            this.FilePath.Size = new System.Drawing.Size(237, 23);
+            this.FilePath.TabIndex = 80;
             // 
             // InDev
             // 
@@ -871,7 +873,7 @@ namespace Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 874);
+            this.ClientSize = new System.Drawing.Size(1206, 874);
             this.Controls.Add(this.ConverterGroupBox);
             this.Controls.Add(this.DeviationGroupBox);
             this.Controls.Add(this.CalculatorGroupBox);
@@ -941,7 +943,7 @@ namespace Calc
         private System.Windows.Forms.GroupBox DeviationGroupBox;
         private System.Windows.Forms.Button Calculate;
         private System.Windows.Forms.Button FileChoose;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox FilePath;
         private System.Windows.Forms.RichTextBox InDev;
         private System.Windows.Forms.RichTextBox OutDev;
         private System.Windows.Forms.Label LabelFileInput;
