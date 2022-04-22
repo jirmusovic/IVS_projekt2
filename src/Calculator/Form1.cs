@@ -46,7 +46,16 @@ namespace Calc
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if(deviation_input != String.Empty)
+            {
+                ConverterGroupBox.Visible = false;
+                CalculatorGroupBox.Visible = false;
+                DeviationGroupBox.Visible = true;
 
+                Deviation dev = new Deviation();
+
+                OutDev.Text = dev.StdDeviation(deviation_input);
+            }
         }
 
         private void output_TextChanged(object sender, EventArgs e)

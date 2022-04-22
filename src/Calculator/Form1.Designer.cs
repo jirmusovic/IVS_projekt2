@@ -322,6 +322,7 @@ namespace Calc
             this.Pi.TabIndex = 65;
             this.Pi.Text = " π";
             this.Pi.UseVisualStyleBackColor = false;
+            this.Pi.Click += new System.EventHandler(this.number_click);
             // 
             // Log
             // 
@@ -348,6 +349,7 @@ namespace Calc
             this.E.TabIndex = 63;
             this.E.Text = "e";
             this.E.UseVisualStyleBackColor = false;
+            this.E.Click += new System.EventHandler(this.number_click);
             // 
             // Backspace
             // 
