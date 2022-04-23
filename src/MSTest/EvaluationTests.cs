@@ -87,6 +87,32 @@ namespace MSTest
 
 
         }
+        [TestMethod]
+        public void EvaluationTooManyBrackets()
+        {
+            var eval = new Evaluation();
+            var result = eval.Evaluate("((((8*9)+(((((1*4)!");
+            Assert.AreEqual(null, result);
+
+        }
+        [TestMethod]
+        public void EvaluationTooManyOperators()
+        {
+            var eval = new Evaluation();
+            var result = eval.Evaluate("(5*/*8)+(1*4)!");
+            Assert.AreEqual(null, result);
+
+        }
+        [TestMethod]
+        public void EvaluationMissingArguments()
+        {
+            var eval = new Evaluation();
+            var result = eval.Evaluate("");
+            Assert.AreEqual(null, result);
+
+        }
+        
+
 
     }
 }
