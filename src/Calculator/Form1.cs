@@ -12,12 +12,7 @@ using System.Windows.Forms;
 
 namespace Calc
 {
-    enum Window
-    {
-        CALCULATOR,
-        CONVERTOR,
-        DEVIATION
-    }
+    enum Window { CALCULATOR, CONVERTOR, DEVIATION }
 
     public partial class Form1 : Form
     {
@@ -117,6 +112,21 @@ namespace Calc
                 else
                     OutDev.Text = "Chyba vstupu!";
             }
+        }
+
+        private void Eq_Click(object sender, EventArgs e)
+        {
+            Evaluation eval = new Evaluation();
+            if(InputCalc.Text != String.Empty)
+            {
+                string res = eval.Evaluate(InputCalc.Text);
+                if (res == null)
+                    OutputCalc.Text = "ERROR";
+                else
+                    OutputCalc.Text = res;
+            }
+            
+            
         }
     }
 }

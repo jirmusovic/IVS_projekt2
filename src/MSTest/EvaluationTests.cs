@@ -62,25 +62,25 @@ namespace MSTest
         public void Evaluation()
         {
             var eval = new Evaluation();
-            var result = eval.N_root("(8*9)+(1*4)!");
+            var result = eval.Evaluate("(8*9)+(1*4)!");
             Assert.AreEqual("96", result);
 
-            var result1 = eval.N_root("LASDASDASD");
+            var result1 = eval.Evaluate("LASDASDASD");
             Assert.AreEqual(null, result1);
 
-            var result2 = eval.N_root("(2*(7+2)-8+(2-1)^2)!");
+            var result2 = eval.Evaluate("(2*(7+2)-8+(2-1)^2)!");
             Assert.AreEqual("39916800", result2);
 
-            var result3 = eval.N_root("(2*(7+2)-8+(2-1)^2)!");
+            var result3 = eval.Evaluate("(2*(7+2)-8+(2-1)^2)!");
             Assert.AreEqual("39916800", result3);
 
-            var result4 = eval.N_root("(((((2*(7+2)-8+(2-1)^2)!");
+            var result4 = eval.Evaluate("(((((2*(7+2)-8+(2-1)^2)!");
             Assert.AreEqual(null, result4);
 
-            var result5 = eval.N_root("(f(4, 2)!*8))^2");
+            var result5 = eval.Evaluate("(f(4, 2)!*8)^2");
             Assert.AreEqual("256", result5);
 
-            var result6 = eval.N_root("e^5");
+            var result6 = eval.Evaluate("e^5");
             Assert.AreEqual(148.413159103, 0.00001, double.Parse(result6));
 
 

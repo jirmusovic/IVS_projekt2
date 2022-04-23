@@ -559,6 +559,7 @@ namespace Calc
             this.Eq.TabIndex = 47;
             this.Eq.Text = "=";
             this.Eq.UseVisualStyleBackColor = false;
+            this.Eq.Click += new System.EventHandler(this.Eq_Click);
             // 
             // Div
             // 
