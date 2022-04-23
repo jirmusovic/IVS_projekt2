@@ -24,6 +24,8 @@ namespace Calc
 
             int firstStringPosition;
 
+            
+
             while ((firstStringPosition = expression.IndexOf('!')) >= 0)
             {
                 int lastStringPosition = firstStringPosition;
@@ -32,7 +34,7 @@ namespace Calc
 
                 expression = expression.Replace(found, Factorial(found));
             }
-            
+
             while ((firstStringPosition = expression.IndexOf('^')) >= 0)
             {
                 int midPos = firstStringPosition;
@@ -43,6 +45,7 @@ namespace Calc
 
                 expression = expression.Replace(found, N_power(found));
             }
+
             while ((firstStringPosition = expression.IndexOf("f(")) >= 0)
             {
                 string found = expression.Substring(firstStringPosition, GetSubstringPos(expression, firstStringPosition, true) - firstStringPosition + 1);
@@ -133,7 +136,11 @@ namespace Calc
                 return null;
             }
 
-            return Math.Round(Math.Pow(x, 1.0 / n), 6).ToString().Replace(',', '.'); ;
+            double result = Math.Round(Math.Pow(x, 1.0 / n), 6);
+            if (double.IsNaN(result))
+                return null;
+            else
+                return result.ToString().Replace(',', '.');
         }
 
 
@@ -159,15 +166,17 @@ namespace Calc
             }
 
 
-            return Math.Round(Math.Pow(x, n), 6).ToString().Replace(',', '.'); ;
+            double result = Math.Round(Math.Pow(x, n), 6);
+            if (double.IsNaN(result))
+                return null;
+            else
+                return result.ToString().Replace(',', '.');
         }
 
 
         public string Factorial(string expression)
         {
             expression = expression.Replace(" ", String.Empty);
-
-
 
             double numDouble = Eval(expression.TrimEnd('!'));
             int num = -1;
