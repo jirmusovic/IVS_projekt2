@@ -28,7 +28,7 @@ namespace Calc
 
             while ((firstStringPosition = expression.IndexOf('!')) >= 0)
             {
-                int lastStringPosition = firstStringPosition;
+                int lastStringPosition = GetSubstringPos(expression, firstStringPosition - 1, true);
                 firstStringPosition = GetSubstringPos(expression, firstStringPosition - 1, false);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
 
