@@ -147,6 +147,12 @@ namespace Calc
             return StringToNum(expression);
         }
 
+        /**
+         * @brief Pomocná funkce pro finální vyhodnocení výrazu po odstranění speciálních funkcí
+         * 
+         * @param expression Textový řetězec pro vyhodnocení
+         * @return Výsledek výrazu, double.NaN v případě chyby výpočtu
+         */
         private double StringToNum(string expression)
         {
             DataTable table = new DataTable();
@@ -163,6 +169,12 @@ namespace Calc
             return res;
         }
 
+        /**
+         * @brief Funkce pro výpočet n-té odmocniny čísla x
+         * 
+         * @param expression Výraz ve tvaru f(x,n), který má být vyhodnocen
+         * @return Výsledek výrazu, null v případě chyby výpočtu nebo tvaru
+         */
         public string N_root(string expression)
         {
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
@@ -194,7 +206,12 @@ namespace Calc
                 return result.ToString().Replace(',', '.');
         }
 
-
+        /**
+         * @brief Funkce pro výpočet n-té mocniny čísla x
+         * 
+         * @param expression Výraz ve tvaru x^n, který má být vyhodnocen
+         * @return Výsledek výrazu, null v případě chyby výpočtu nebo tvaru
+         */
         public string N_power(string expression)
         {
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
@@ -223,7 +240,12 @@ namespace Calc
                 return result.ToString().Replace(',', '.');
         }
 
-
+        /**
+         * @brief Funkce pro výpočet faktoriálu
+         * 
+         * @param expression Výraz ve tvaru x!, který má být vyhodnocen
+         * @return Výsledek výrazu, null v případě chyby výpočtu nebo tvaru
+         */
         public string Factorial(string expression)
         {
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
@@ -249,7 +271,14 @@ namespace Calc
             return result.ToString();
         }
 
-
+        /**
+         * @brief Funkce pro získání krajního indexu podvýrazu
+         * 
+         * @param expression Textový výraz
+         * @param starterPos Počátešční index, od kterého se prochází výrazem
+         * @param forward Určuje směr procházení (true = směr dopředu / false = směr dozadu)
+         * @return Krajní index výrazu v požadovaném směru
+         */
         private int GetSubstringPos(string expression, int starterPos, bool forward)
         {
 
@@ -319,6 +348,12 @@ namespace Calc
 
         }
 
+        /**
+         * @brief Funkce pro odstranění přebytečných závorek, které obklopují výraz
+         * 
+         * @param expression Textový výraz
+         * @return Výraz bez okrajových závorek
+         */
         private string RemoveNotNecessaryBrackets(string expression)
         {
             if (expression.Length <= 2)
@@ -346,6 +381,12 @@ namespace Calc
                 return expression;
         }
 
+        /**
+         * @brief Funkce pro výpočet sin(x)
+         * 
+         * @param expression Výraz ve tvaru sin(x), který má být vyhodnocen
+         * @return Výsledek výrazu, null v případě chyby výpočtu nebo tvaru
+         */
         public string Sin(string expression)
         {
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
@@ -366,6 +407,12 @@ namespace Calc
                 return result.ToString();
         }
 
+        /**
+         * @brief Funkce pro výpočet cos(x)
+         * 
+         * @param expression Výraz ve tvaru cos(x), který má být vyhodnocen
+         * @return Výsledek výrazu, null v případě chyby výpočtu nebo tvaru
+         */
         public string Cos(string expression)
         {
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
@@ -385,6 +432,12 @@ namespace Calc
                 return result.ToString();
         }
 
+        /**
+         * @brief Funkce pro výpočet tan(x)
+         * 
+         * @param expression Výraz ve tvaru tan(x), který má být vyhodnocen
+         * @return Výsledek výrazu, null v případě chyby výpočtu nebo tvaru
+         */
         public string Tan(string expression)
         {
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
@@ -403,6 +456,23 @@ namespace Calc
                 return null;
             else
                 return result.ToString();
+        }
+
+        /**
+         * @brief Funkce pro výpočet aritmetického průměru čísel
+         * 
+         * @param numbers Čísla, ze kterých má být vypočítán průměr
+         * @return Aritmetický průměr
+         */
+        public double ArithmeticMean(double[] numbers)
+        {
+            double res = 0.0;
+            foreach (double num in numbers)
+            {
+                res += num;
+            }
+
+            return res / numbers.Length;
         }
 
     }

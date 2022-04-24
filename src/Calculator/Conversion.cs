@@ -1,8 +1,9 @@
 ﻿/**
  *@file Conversion.cs
+ *@class Conversion
+ *
  *@brief Třída pro převod čísel mezi soustavami
  *
- * 
 */
 
 using System;
@@ -19,25 +20,34 @@ namespace Calc
                                                 'I', 'J', 'K', 'L', 'M', 'N', 
                                                 'O', 'P', 'Q', 'R', 'S', 'T', 
                                                 'U', 'V', 'W', 'X', 'Y', 'Z' }; /** Pole znaků, které jsou použity s různých soustavách*/
-        
+
+        /**
+         * @brief Funkce pro převod čísla mezi soustavami
+         * 
+         * @param number Číslo pro převod
+         * @param fromBase Báze, ze které převádíme číslo 
+         * @param toBase Báze, do které převádíme číslo 
+         * 
+         * @return Číslo reprezentované v nové bázi, null v případě chyby
+         */
         public string Convert_from_to(string number, string fromBase, string toBase)
         {
-            int from = int.Parse(fromBase);
-            int to = int.Parse(toBase);
-            if(from > 36 || to > 36)
+            int from = int.Parse(fromBase); /**Číselná reprezentace báze, ze které převádíme číslo */
+            int to = int.Parse(toBase); /**Číselná reprezentace báze, do které převádíme číslo */
+            if (from > 36 || to > 36) //Ověření korektního vstupu
             {
                 return null;
             }
 
-            number = number.ToUpper();
+            number = number.ToUpper(); //Převod všech znaků na UpperCase
 
-            if (from == to)
+            if (from == to) //V případě shodnosti bází se převod neprovede
                 return number;
 
-            int number10Base = 0;
-            if (from != 10)
+            int number10Base = 0; /**Číslo reprezentované v desítkové bázi*/
+            if (from != 10) 
             {
-                for (int i = 0; i < number.Length; i++)
+                for (int i = 0; i < number.Length; i++)//Cyklus pro převod čísla do desítkové báze
                 {
                     char temp = number[number.Length - i - 1];
 
@@ -70,13 +80,13 @@ namespace Calc
 
             if (to != 10)
             {
-                Stack<char> final = new Stack<char>();
-                while (number10Base != 0)
+                Stack<char> final = new Stack<char>(); /**Výsledná hodnota čísla v požadované bázi*/
+                while (number10Base != 0) //Cyklus pro převod čísla do požadované báze
                 {
                     final.Push(numList[number10Base % to]);
                     number10Base /= to;
                 }
-                string res = String.Empty;
+                string res = String.Empty; /**Výsledné číslo reprezentované jako textový řetězec*/
                 foreach (char c in final)
                 {
                     res += c;

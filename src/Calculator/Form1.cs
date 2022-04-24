@@ -1,4 +1,10 @@
-﻿using System;
+﻿/**
+ * @file Form1.cs
+ * 
+ * @brief Funkce pro interakci s grafickým rozhraním
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +18,7 @@ using System.Windows.Forms;
 
 namespace Calc
 {
-    enum Window { CALCULATOR, CONVERTOR, DEVIATION }
+    enum Window { CALCULATOR, CONVERTOR, DEVIATION } //Očíslování typu oken
 
     public partial class Form1 : Form
     {
