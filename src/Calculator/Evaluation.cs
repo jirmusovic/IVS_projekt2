@@ -41,6 +41,9 @@ namespace Calc
         {
             expression = RemoveNotNecessaryBrackets(expression); //Odstanění přebytečných závorek okolo řetězce
 
+            if (expression.IndexOf("sin()") >= 0 || expression.IndexOf("cos()") >= 0 || expression.IndexOf("tan()") >= 0)
+                return double.NaN;
+
             int firstStringPosition; /**Index prvního výskytu podvýrazu/funkce*/
 
             while ((firstStringPosition = expression.IndexOf('!')) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů faktoriálu
@@ -50,9 +53,10 @@ namespace Calc
                 if (expression[firstStringPosition] == '(' && expression[lastStringPosition - 1] != ')')
                     firstStringPosition++;
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                if (found == null)
+                string result = Factorial(found);
+                if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, Factorial(found));
+                expression = expression.Replace(found, result);
             }
 
             while ((firstStringPosition = expression.IndexOf('^')) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů faktoriálu
@@ -61,42 +65,47 @@ namespace Calc
                 int lastStringPosition = GetSubstringPos(expression, midPos + 1, true);
                 firstStringPosition = GetSubstringPos(expression, midPos - 1, false);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                if (found == null)
+                string result = N_power(found);
+                if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, N_power(found));
+                expression = expression.Replace(found, result);
             }
 
             while ((firstStringPosition = expression.IndexOf("f(")) >= 0)
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                if (found == null)
+                string result = N_root(found);
+                if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, N_root(found));
+                expression = expression.Replace(found, result);
             }
             while ((firstStringPosition = expression.IndexOf("sin(")) >= 0)
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                if (found == null)
+                string result = Sin(found).Replace(',', '.');
+                if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, Sin(found));
+                expression = expression.Replace(found, result);
             }
             while ((firstStringPosition = expression.IndexOf("cos(")) >= 0)
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                if (found == null)
+                string result = Cos(found).Replace(',', '.');
+                if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, Cos(found));
+                expression = expression.Replace(found, result);
             }
             while ((firstStringPosition = expression.IndexOf("tan(")) >= 0)
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                if (found == null)
+                string result = Tan(found).Replace(',', '.');
+                if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, Tan(found));
+                expression = expression.Replace(found, result);
             }
             while ((firstStringPosition = expression.IndexOf("π")) >= 0)
             {
@@ -243,6 +252,7 @@ namespace Calc
 
         private int GetSubstringPos(string expression, int starterPos, bool forward)
         {
+
             char[] seek = new char[2];
             char[] interrupt = new char[] { '+', '-', '*', '/', '^' };
             int step = 0;
@@ -347,12 +357,13 @@ namespace Calc
             expression = expression.TrimStart(startTrim);
             expression = expression.TrimEnd(')');
             x = Eval(expression);
+            Console.WriteLine(x);
 
             double result = Math.Round(Math.Sin(x), 6);
             if (double.IsNaN(result))
                 return null;
             else
-                return result.ToString().Replace(',', '.');
+                return result.ToString();
         }
 
         public string Cos(string expression)
@@ -371,7 +382,7 @@ namespace Calc
             if (double.IsNaN(result))
                 return null;
             else
-                return result.ToString().Replace(',', '.');
+                return result.ToString();
         }
 
         public string Tan(string expression)
@@ -384,13 +395,14 @@ namespace Calc
 
             expression = expression.TrimStart(startTrim);
             expression = expression.TrimEnd(')');
+            
             x = Eval(expression);
 
             double result = Math.Round(Math.Tan(x), 6);
             if (double.IsNaN(result))
                 return null;
             else
-                return result.ToString().Replace(',', '.');
+                return result.ToString();
         }
 
     }
