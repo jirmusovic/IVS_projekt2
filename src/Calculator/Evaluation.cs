@@ -113,13 +113,13 @@ namespace Calc
                 if(firstStringPosition != 0)
                 {
                     char tmp = expression[firstStringPosition - 1];
-                    if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == '('))
+                    if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == '(' || tmp == '^'))
                         pi = "*" + pi;
                 }
                 if (firstStringPosition != expression.Length-1)
                 {
                     char tmp = expression[firstStringPosition +1];
-                    if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == ')'))
+                    if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == ')' || tmp == '^'))
                         pi = pi + "*";
                 }
                 expression = expression.Replace(expression.Substring(firstStringPosition, 1), pi);
@@ -131,13 +131,13 @@ namespace Calc
                 if (firstStringPosition != 0)
                 {
                     char tmp = expression[firstStringPosition - 1];
-                    if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == '('))
+                    if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == '(' || tmp == '^'))
                         e = "*" + e;
                 }
                 if (firstStringPosition != expression.Length - 1)
                 {
                     char tmp = expression[firstStringPosition + 1];
-                    if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == ')'))
+                    if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == ')' || tmp == '^'))
                         e = e + "*";
                 }
                 expression = expression.Replace(expression.Substring(firstStringPosition, 1), e);
