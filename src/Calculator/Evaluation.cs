@@ -15,10 +15,9 @@ namespace Calc
     public class Evaluation
     {
         /**
-         * @brief
+         * @brief Funkce, která vrací výsledek výrazu v textovém řetězci
          * 
          * @param expression Textový řetězec pro vyhodnocení
-         * 
          * @return Textový řetězec obsahující výsledek, null v případě chyby
          */
         public string Evaluate(string expression)
@@ -32,13 +31,19 @@ namespace Calc
             return res.ToString();
         }
 
+        /**
+         * @brief   Funkce na vyhodnocení výrazu. Funkce pracuje na principu stálého zjednodušování problému. 
+         *          Při nalezení podvýrazu se tato část problému vyhodnotí a jejím výsledkem se nahradí její původní výskyt v řetězci
+         * @param expression Textový řetězec pro vyhodnocení
+         * @return Výsledek výrazu, double.NaN v případě chyby výpočtu
+         */
         private double Eval(string expression)
         {
-            expression = RemoveNotNecessaryBrackets(expression);
+            expression = RemoveNotNecessaryBrackets(expression); //Odstanění přebytečných závorek okolo řetězce
 
-            int firstStringPosition;
+            int firstStringPosition; /**Index prvního výskytu podvýrazu/funkce*/
 
-            while ((firstStringPosition = expression.IndexOf('!')) >= 0)
+            while ((firstStringPosition = expression.IndexOf('!')) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů faktoriálu
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition - 1, true);
                 firstStringPosition = GetSubstringPos(expression, firstStringPosition - 1, false);
@@ -48,7 +53,7 @@ namespace Calc
                 expression = expression.Replace(found, Factorial(found));
             }
 
-            while ((firstStringPosition = expression.IndexOf('^')) >= 0)
+            while ((firstStringPosition = expression.IndexOf('^')) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů faktoriálu
             {
                 int midPos = firstStringPosition;
                 int lastStringPosition = GetSubstringPos(expression, midPos + 1, true);
@@ -71,7 +76,7 @@ namespace Calc
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                if (found == "NAN")
+                if (found == null)
                     return double.NaN;
                 expression = expression.Replace(found, Sin(found));
             }
@@ -79,7 +84,7 @@ namespace Calc
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                if (found == "NAN")
+                if (found == null)
                     return double.NaN;
                 expression = expression.Replace(found, Cos(found));
             }
@@ -87,7 +92,7 @@ namespace Calc
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                if (found == "NAN")
+                if (found == null)
                     return double.NaN;
                 expression = expression.Replace(found, Tan(found));
             }

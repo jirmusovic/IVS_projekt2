@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,19 +18,36 @@ namespace Calc
         {
             string input = String.Empty;
             string line;
-            while((line = Console.ReadLine()) != null)
+            string tmp = String.Empty;
+            Task t = Task.Run(() =>
             {
+                while ((line = Console.ReadLine()) != null)
+                {
+                    if (input != String.Empty)
+                    {
+                        input += ' ';
+                    }
+                    input += line.Trim('\n');
+                }
                 if (input != String.Empty)
                 {
-                    input += ' ';
+                    Deviation dev = new Deviation();
+
+                    tmp = dev.StdDeviation(input);
+                    if (tmp != null)
+                        Console.WriteLine(tmp);
+                    else
+                        Console.WriteLine("Chyba vstupu!");
                 }
-                input += line.Trim('\n');
-                
-            }
+            });
+            TimeSpan ts = TimeSpan.FromMilliseconds(500);
+            if (!t.Wait(ts))
+                Console.WriteLine("Èas na zadání dat pro výbìrovou smìrodatnou odchylku vypršel!");
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(input));
+            Application.Run(new Form1(tmp));
         }
     }
 }

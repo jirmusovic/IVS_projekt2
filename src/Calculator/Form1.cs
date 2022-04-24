@@ -58,15 +58,12 @@ namespace Calc
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if(deviation_input != String.Empty)
+            if (deviation_input != String.Empty)
             {
                 Switch_active_window((int)Window.DEVIATION);
 
-                Deviation dev = new Deviation();
-
-                string tmp = dev.StdDeviation(deviation_input);
-                if (tmp != null)
-                    OutDev.Text = tmp;
+                if (deviation_input != null)
+                    OutDev.Text = deviation_input;
                 else
                     OutDev.Text = "Chyba vstupu!";
             }
