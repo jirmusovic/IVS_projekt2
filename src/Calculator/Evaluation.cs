@@ -45,8 +45,10 @@ namespace Calc
 
             while ((firstStringPosition = expression.IndexOf('!')) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů faktoriálu
             {
-                int lastStringPosition = GetSubstringPos(expression, firstStringPosition - 1, true);
+                int lastStringPosition = firstStringPosition;
                 firstStringPosition = GetSubstringPos(expression, firstStringPosition - 1, false);
+                if (expression[firstStringPosition] == '(' && expression[lastStringPosition - 1] != ')')
+                    firstStringPosition++;
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
                 if (found == null)
                     return double.NaN;
