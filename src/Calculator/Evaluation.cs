@@ -336,7 +336,7 @@ namespace Calc
                 return expression;
         }
 
-        private string Sin(string expression)
+        public string Sin(string expression)
         {
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
 
@@ -355,7 +355,7 @@ namespace Calc
                 return result.ToString().Replace(',', '.');
         }
 
-        private string Cos(string expression)
+        public string Cos(string expression)
         {
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
 
@@ -374,7 +374,7 @@ namespace Calc
                 return result.ToString().Replace(',', '.');
         }
 
-        private string Tan(string expression)
+        public string Tan(string expression)
         {
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
 
