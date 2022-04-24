@@ -9,7 +9,7 @@ test:
 profile: 
 	dotnet build ./Calculator
 	cd Profiling/bin/debug/netcoreapp3.1/
-	cat input.txt
+	echo input.txt
 	Profiling.exe
 
 help:

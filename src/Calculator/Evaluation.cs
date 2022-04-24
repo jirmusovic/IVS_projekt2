@@ -80,6 +80,15 @@ namespace Calc
                     return double.NaN;
                 expression = expression.Replace(found, result);
             }
+            while ((firstStringPosition = expression.IndexOf("log(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů dekadických logaritmů
+            {
+                int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
+                string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
+                string result = Log(found).Replace(',', '.');
+                if (result == null)
+                    return double.NaN;
+                expression = expression.Replace(found, result);
+            }
             while ((firstStringPosition = expression.IndexOf("sin(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů sin
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
@@ -451,6 +460,26 @@ namespace Calc
             x = Eval(expression); /**vyhodnocené X*/
 
             double result = Math.Round(Math.Tan(x), 6);
+            if (double.IsNaN(result))
+                return null;
+            else
+                return result.ToString();
+        }
+
+        public string Log(string expression)
+        {
+            expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
+
+            double x = 0;
+
+            char[] startTrim = new char[] { 'l', 'o', 'g', '(' }; /**Znaky, které mají být odstaněny ze začátku řetězce*/
+
+            expression = expression.TrimStart(startTrim); //Odstranění nežádoucích charakterů ze začátku řetězce
+            expression = expression.TrimEnd(')'); //Odstranění nežádoucích charakterů na konci řetězce
+
+            x = Eval(expression); /**vyhodnocené X*/
+
+            double result = Math.Round(Math.Log10(x), 6);
             if (double.IsNaN(result))
                 return null;
             else
