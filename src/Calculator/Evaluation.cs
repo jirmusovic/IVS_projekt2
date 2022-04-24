@@ -1,15 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/**
+ * @file Evaluation.cs
+ * @class Evaluation
+ * 
+ * @brief Třída pro vyhodnocení matematických výrazů
+ * 
+ * @date 
+ */
+
+using System;
 using System.Data;
-using System.Text;
 
 namespace Calc
 {
     public class Evaluation
     {
+        /**
+         * @brief
+         * 
+         * @param expression Textový řetězec pro vyhodnocení
+         * 
+         * @return Textový řetězec obsahující výsledek, null v případě chyby
+         */
         public string Evaluate(string expression)
         {
-            expression = expression.Replace(" ", String.Empty);
+            expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
             double res = Eval(expression);
             if(double.IsNaN(res))
             {
@@ -24,14 +38,12 @@ namespace Calc
 
             int firstStringPosition;
 
-            
-
             while ((firstStringPosition = expression.IndexOf('!')) >= 0)
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition - 1, true);
                 firstStringPosition = GetSubstringPos(expression, firstStringPosition - 1, false);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-
+                
                 expression = expression.Replace(found, Factorial(found));
             }
 
@@ -40,7 +52,6 @@ namespace Calc
                 int midPos = firstStringPosition;
                 int lastStringPosition = GetSubstringPos(expression, midPos + 1, true);
                 firstStringPosition = GetSubstringPos(expression, midPos - 1, false);
-
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
 
                 expression = expression.Replace(found, N_power(found));
@@ -48,9 +59,34 @@ namespace Calc
 
             while ((firstStringPosition = expression.IndexOf("f(")) >= 0)
             {
-                string found = expression.Substring(firstStringPosition, GetSubstringPos(expression, firstStringPosition, true) - firstStringPosition + 1);
+                int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
+                string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
 
                 expression = expression.Replace(found, N_root(found));
+            }
+            while ((firstStringPosition = expression.IndexOf("sin(")) >= 0)
+            {
+                int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
+                string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
+                if (found == "NAN")
+                    return double.NaN;
+                expression = expression.Replace(found, Sin(found));
+            }
+            while ((firstStringPosition = expression.IndexOf("cos(")) >= 0)
+            {
+                int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
+                string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
+                if (found == "NAN")
+                    return double.NaN;
+                expression = expression.Replace(found, Cos(found));
+            }
+            while ((firstStringPosition = expression.IndexOf("tan(")) >= 0)
+            {
+                int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
+                string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
+                if (found == "NAN")
+                    return double.NaN;
+                expression = expression.Replace(found, Tan(found));
             }
             while ((firstStringPosition = expression.IndexOf("π")) >= 0)
             {
@@ -90,10 +126,6 @@ namespace Calc
             }
 
             return StringToNum(expression);
-            
-
-
-
         }
 
         private double StringToNum(string expression)
@@ -114,7 +146,7 @@ namespace Calc
 
         public string N_root(string expression)
         {
-            expression = expression.Replace(" ", String.Empty);
+            expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
 
             double x = 0;
             double n = 0;
@@ -144,10 +176,9 @@ namespace Calc
         }
 
 
-
         public string N_power(string expression)
         {
-            expression = expression.Replace(" ", String.Empty);
+            expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
 
             double x = 0;
             double n = 0;
@@ -176,11 +207,11 @@ namespace Calc
 
         public string Factorial(string expression)
         {
-            expression = expression.Replace(" ", String.Empty);
+            expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
 
             double numDouble = Eval(expression.TrimEnd('!'));
             int num = -1;
-            if(Math.Abs(numDouble%1) <= Double.Epsilon * 100)
+            if (Math.Abs(numDouble % 1) <= Double.Epsilon * 100)
             {
                 num = Convert.ToInt32(numDouble);
             }
@@ -190,7 +221,7 @@ namespace Calc
                 return null;
             }
             int result = 1;
-            for(; num>0; num--)
+            for (; num > 0; num--)
             {
                 result *= num;
             }
@@ -199,39 +230,6 @@ namespace Calc
             return result.ToString();
         }
 
-        private int GetCharIndexPos(string expression, char seeking)
-        {
-            int position = 0;
-
-            int brackets_count = 0;
-            for (int i = 0; i < expression.Length; i++)
-            {
-
-                if (expression[i] == '(')
-                {
-                    brackets_count++;
-                }
-
-                if (expression[i] == ')')
-                {
-                    brackets_count--;
-                    if (i == expression.Length - 1)
-                    {
-                        return position;
-                    }
-                }
-
-                if (expression[i] == seeking)
-                {
-                    position = i;
-                    if (brackets_count == 0)
-                    {
-                        return i;
-                    }
-                }
-            }
-            return 0;
-        }
 
         private int GetSubstringPos(string expression, int starterPos, bool forward)
         {
@@ -328,5 +326,64 @@ namespace Calc
                 return expression;
         }
 
+        private string Sin(string expression)
+        {
+            expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
+
+            double x = 0;
+
+            char[] startTrim = new char[] { 's', 'i', 'n', '(' };
+
+            expression = expression.TrimStart(startTrim);
+            expression = expression.TrimEnd(')');
+            x = Eval(expression);
+
+            double result = Math.Round(Math.Sin(Math.PI * x / 180), 6);
+            if (double.IsNaN(result))
+                return null;
+            else
+                return result.ToString().Replace(',', '.');
+        }
+
+        private string Cos(string expression)
+        {
+            expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
+
+            double x = 0;
+
+            char[] startTrim = new char[] { 'c', 'o', 's', '(' };
+
+            expression = expression.TrimStart(startTrim);
+            expression = expression.TrimEnd(')');
+            x = Eval(expression);
+
+            double result = Math.Cos(x);
+            if (double.IsNaN(result))
+                return null;
+            else
+                return result.ToString().Replace(',', '.');
+        }
+
+        private string Tan(string expression)
+        {
+            expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
+
+            double x = 0;
+
+            char[] startTrim = new char[] { 't', 'a', 'n', '(' };
+
+            expression = expression.TrimStart(startTrim);
+            expression = expression.TrimEnd(')');
+            x = Eval(expression);
+
+            double result = Math.Tan(x);
+            if (double.IsNaN(result))
+                return null;
+            else
+                return result.ToString().Replace(',', '.');
+        }
+
     }
 }
+/*** Konec souboru Evaluation.cs ***/
+
