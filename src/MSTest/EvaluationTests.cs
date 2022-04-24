@@ -81,7 +81,7 @@ namespace MSTest
             Assert.AreEqual("256", result5);
 
             var result6 = eval.Evaluate("e^5");
-            Assert.AreEqual(148.413159103, 0.00001, double.Parse(result6));
+            Assert.AreEqual(148.413159103, double.Parse(result6), 0.00001);
 
 
 
@@ -117,7 +117,7 @@ namespace MSTest
         {
             var eval = new Evaluation();
             var result = eval.Sin("sin(9.15555π)");
-            Assert.AreEqual(-0.46945615, 0.00001, double.Parse(result));
+            Assert.AreEqual(-0.46945615, double.Parse(result), 0.00001);
 
         }
 
@@ -135,7 +135,7 @@ namespace MSTest
         {
             var eval = new Evaluation();
             var result = eval.Cos("cos(-987987π)");
-            Assert.AreEqual(-1, 0.00001, double.Parse(result));
+            Assert.AreEqual(-1, double.Parse(result), 0.00001);
 
         }
 
@@ -153,7 +153,7 @@ namespace MSTest
         {
             var eval = new Evaluation();
             var result = eval.Tan("tan(999999*π)");
-            Assert.AreEqual(0, 0.00001, double.Parse(result));
+            Assert.AreEqual(0, double.Parse(result), 0.00001);
 
         }
 
@@ -171,7 +171,7 @@ namespace MSTest
         {
             var eval = new Evaluation();
             var result = eval.Evaluate("sin(cos(5π))");
-            Assert.AreEqual(-0.8414709848, 0.00001, double.Parse(result));
+            Assert.AreEqual(-0.8414709848, double.Parse(result), 0.00001);
 
 
         }
