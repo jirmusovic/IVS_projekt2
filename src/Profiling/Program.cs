@@ -1,5 +1,6 @@
 ﻿using Calc;
 using System;
+using System.Diagnostics;
 
 namespace Profiling
 {
