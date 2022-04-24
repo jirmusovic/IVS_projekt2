@@ -41,7 +41,7 @@ namespace MSTest
             Assert.AreEqual(null, result2);
 
             var result4 = eval.N_root("f(10000, 0.00000000000000000000000000000000000000000000000000000000001)");
-            Assert.AreEqual(null, result4);   
+            Assert.IsTrue(double.IsInfinity(double.Parse(result4)));
         }
 
         [TestMethod]
