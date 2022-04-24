@@ -111,7 +111,42 @@ namespace MSTest
             Assert.AreEqual(null, result);
 
         }
-        
+
+        [TestMethod]
+        public void EvaluationSin()
+        {
+            var eval = new Evaluation();
+            var result = eval.Sin("");
+            Assert.AreEqual(null, result);
+
+        }
+
+        [TestMethod]
+        public void EvaluationCos()
+        {
+            var eval = new Evaluation();
+            var result = eval.Evaluate("");
+            Assert.AreEqual(null, result);
+
+        }
+
+        [TestMethod]
+        public void EvaluationTan()
+        {
+            var eval = new Evaluation();
+            var result = eval.Evaluate("");
+            Assert.AreEqual(null, result);
+
+        }
+
+        [TestMethod]
+        public void EvaluationMissingArguments()
+        {
+            var eval = new Evaluation();
+            var result = eval.Evaluate("");
+            Assert.AreEqual(null, result);
+
+        }
 
 
     }
