@@ -116,11 +116,12 @@ namespace MSTest
         public void EvaluationSin()
         {
             var eval = new Evaluation();
-            var result = eval.Sin("sin(9.5π)");
-            Assert.AreEqual(-0.07515112, 0.00001, double.Parse(result));
+            var result = eval.Sin("sin(9.15555π)");
+            Assert.AreEqual(-0.46945615, 0.00001, double.Parse(result));
 
         }
 
+        [TestMethod]
         public void EvaluationSinBad()
         {
             var eval = new Evaluation();
@@ -134,7 +135,7 @@ namespace MSTest
         {
             var eval = new Evaluation();
             var result = eval.Cos("cos(-987987π)");
-            Assert.AreEqual(0.99570243, 0.00001, double.Parse(result));
+            Assert.AreEqual(-1, 0.00001, double.Parse(result));
 
         }
 
@@ -152,7 +153,7 @@ namespace MSTest
         {
             var eval = new Evaluation();
             var result = eval.Tan("tan(999999*π)");
-            Assert.AreEqual(-4.61843033, 0.00001, double.Parse(result));
+            Assert.AreEqual(0, 0.00001, double.Parse(result));
 
         }
 
@@ -164,6 +165,27 @@ namespace MSTest
             Assert.AreEqual(null, result);
 
         }
+
+        [TestMethod]
+        public void EvaluationGoniometric()
+        {
+            var eval = new Evaluation();
+            var result = eval.Evaluate("sin(cos(5π))");
+            Assert.AreEqual(-0.8414709848, 0.00001, double.Parse(result));
+
+
+        }
+
+        [TestMethod]
+        public void EvaluationGoniometricBad()
+        {
+            var eval = new Evaluation();
+            var result = eval.Evaluate("5*0-6+12-6+sin(cos(tan()))");
+            Assert.AreEqual(null, result);
+
+
+        }
+
 
 
 
