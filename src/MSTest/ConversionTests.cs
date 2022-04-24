@@ -57,15 +57,7 @@ namespace MSTest
             Assert.IsTrue(result == null);
         }
 
-        [TestMethod]
-        public void Fromrandom()
-        {
-            var convert = new Conversion();
-            var result = convert.Convert_from_to("aabcabbbaacbbbbbb54aaaaaabbbbc6587493217485248517856285561256", "13", "31");
-            string expected = "5nghnu0odjq22qt0c5n99iok77sqmdlc1n6p4k2hmccntj";
-
-            Assert.IsTrue(result == expected.ToUpper());
-        }
+     
 
         [TestMethod]
         public void Fromrandom1()
