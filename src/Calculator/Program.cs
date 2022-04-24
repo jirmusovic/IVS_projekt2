@@ -23,9 +23,11 @@ namespace Calc
         [STAThread]
         static void Main()
         {
+            string res = String.Empty; /**Vysledek vyhodnoceni výbìrové smìrodatné odchylky*/
+#if false
             string input = String.Empty; /**Promìnná pro uchování dat zadaných uživatelem*/
             string line; /**Promìnná pro uchování aktuálnì pøeèteného øádku*/
-            string res = String.Empty; /**Vysledek vyhodnoceni výbìrové smìrodatné odchylky*/
+            
             Task t = Task.Run(() =>  //Zaèátek operace, která èeká na uživatelský vstup
             {
                 while ((line = Console.ReadLine()) != null) //Ètení všech øádkù ze vstupu
@@ -50,7 +52,7 @@ namespace Calc
             TimeSpan ts = TimeSpan.FromMilliseconds(500);
             if (!t.Wait(ts))
                 Console.WriteLine("Èas na zadání dat pro výbìrovou smìrodatnou odchylku vypršel!");
-
+#endif
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

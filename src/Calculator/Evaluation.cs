@@ -23,7 +23,7 @@ namespace Calc
         public string Evaluate(string expression)
         {
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
-            double res = Eval(expression);
+            double res = Eval(expression); /**Výsledek*/
             if(double.IsNaN(res))
             {
                 return null;
@@ -41,7 +41,7 @@ namespace Calc
         {
             expression = RemoveNotNecessaryBrackets(expression); //Odstanění přebytečných závorek okolo řetězce
 
-            if (expression.IndexOf("sin()") >= 0 || expression.IndexOf("cos()") >= 0 || expression.IndexOf("tan()") >= 0)
+            if (expression.IndexOf("sin()") >= 0 || expression.IndexOf("cos()") >= 0 || expression.IndexOf("tan()") >= 0) //Ověření, jestli řetězec neobsahuje goniometrické funkce bez parametru
                 return double.NaN;
 
             int firstStringPosition; /**Index prvního výskytu podvýrazu/funkce*/
@@ -71,7 +71,7 @@ namespace Calc
                 expression = expression.Replace(found, result);
             }
 
-            while ((firstStringPosition = expression.IndexOf("f(")) >= 0)
+            while ((firstStringPosition = expression.IndexOf("f(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů odmocnin
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
@@ -80,7 +80,7 @@ namespace Calc
                     return double.NaN;
                 expression = expression.Replace(found, result);
             }
-            while ((firstStringPosition = expression.IndexOf("sin(")) >= 0)
+            while ((firstStringPosition = expression.IndexOf("sin(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů sin
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
@@ -89,7 +89,7 @@ namespace Calc
                     return double.NaN;
                 expression = expression.Replace(found, result);
             }
-            while ((firstStringPosition = expression.IndexOf("cos(")) >= 0)
+            while ((firstStringPosition = expression.IndexOf("cos(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů cos
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
@@ -98,25 +98,25 @@ namespace Calc
                     return double.NaN;
                 expression = expression.Replace(found, result);
             }
-            while ((firstStringPosition = expression.IndexOf("tan(")) >= 0)
+            while ((firstStringPosition = expression.IndexOf("tan(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů tan
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                string result = Tan(found).Replace(',', '.');
+                string result = Tan(found).Replace(',', '.'); 
                 if (result == null)
                     return double.NaN;
                 expression = expression.Replace(found, result);
             }
-            while ((firstStringPosition = expression.IndexOf("π")) >= 0)
+            while ((firstStringPosition = expression.IndexOf("π")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů zanku π
             {
                 string pi = Math.PI.ToString().Replace(',', '.');
-                if(firstStringPosition != 0)
+                if(firstStringPosition != 0) //Doplnění znaku * před π, pokud nebyl zadán uživatelem a je nutný pro další výpočty
                 {
                     char tmp = expression[firstStringPosition - 1];
                     if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == '(' || tmp == '^'))
                         pi = "*" + pi;
                 }
-                if (firstStringPosition != expression.Length-1)
+                if (firstStringPosition != expression.Length-1) //Doplnění znaku * za π, pokud nebyl zadán uživatelem a je nutný pro další výpočty
                 {
                     char tmp = expression[firstStringPosition +1];
                     if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == ')' || tmp == '^'))
@@ -125,16 +125,16 @@ namespace Calc
                 expression = expression.Replace(expression.Substring(firstStringPosition, 1), pi);
 
             }
-            while ((firstStringPosition = expression.IndexOf("e")) >= 0)
+            while ((firstStringPosition = expression.IndexOf("e")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů zanku e
             {
-                string e = Math.E.ToString().Replace(',', '.');
-                if (firstStringPosition != 0)
+                string e = Math.E.ToString().Replace(',', '.'); 
+                if (firstStringPosition != 0) //Doplnění znaku * před e, pokud nebyl zadán uživatelem a je nutný pro další výpočty
                 {
                     char tmp = expression[firstStringPosition - 1];
                     if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == '(' || tmp == '^'))
                         e = "*" + e;
                 }
-                if (firstStringPosition != expression.Length - 1)
+                if (firstStringPosition != expression.Length - 1) //Doplnění znaku * za e, pokud nebyl zadán uživatelem a je nutný pro další výpočty
                 {
                     char tmp = expression[firstStringPosition + 1];
                     if (!(tmp == '*' || tmp == '/' || tmp == '-' || tmp == '+' || tmp == ')' || tmp == '^'))
@@ -182,11 +182,11 @@ namespace Calc
             double x = 0;
             double n = 0;
 
-            char[] startTrim = new char[] { 'f', '(' };
+            char[] startTrim = new char[] { 'f', '(' }; /**Znaky, které mají být odstaněny ze začátku řetězce*/
 
-            expression = expression.TrimStart(startTrim);
-            expression = expression.TrimEnd(')');
-            string[] values = expression.Split(',');
+            expression = expression.TrimStart(startTrim); //Odstranění nežádoucích charakterů ze začátku řetězce
+            expression = expression.TrimEnd(')'); //Odstranění nežádoucích charakterů na konci řetězce
+            string[] values = expression.Split(','); //Rozdělení na X část a N část
             if (values.Length != 2)
                 return null;
             if ((x = Eval(values[0])) == double.NaN)
@@ -199,7 +199,7 @@ namespace Calc
                 return null;
             }
 
-            double result = Math.Round(Math.Pow(x, 1.0 / n), 6);
+            double result = Math.Round(Math.Pow(x, 1.0 / n), 6); 
             if (double.IsNaN(result))
                 return null;
             else
@@ -219,7 +219,7 @@ namespace Calc
             double x = 0;
             double n = 0;
 
-            string[] values = expression.Split('^');
+            string[] values = expression.Split('^'); //Rozdělení na X část a N část
             if (values.Length != 2)
                 return null;
             if((x = Eval(values[0])) == double.NaN)
@@ -393,12 +393,11 @@ namespace Calc
 
             double x = 0;
 
-            char[] startTrim = new char[] { 's', 'i', 'n', '(' };
+            char[] startTrim = new char[] { 's', 'i', 'n', '(' }; /**Znaky, které mají být odstaněny ze začátku řetězce*/
 
-            expression = expression.TrimStart(startTrim);
-            expression = expression.TrimEnd(')');
-            x = Eval(expression);
-            Console.WriteLine(x);
+            expression = expression.TrimStart(startTrim); //Odstranění nežádoucích charakterů ze začátku řetězce
+            expression = expression.TrimEnd(')'); //Odstranění nežádoucích charakterů na konci řetězce
+            x = Eval(expression); /**vyhodnocené X*/
 
             double result = Math.Round(Math.Sin(x), 6);
             if (double.IsNaN(result))
@@ -419,11 +418,11 @@ namespace Calc
 
             double x = 0;
 
-            char[] startTrim = new char[] { 'c', 'o', 's', '(' };
+            char[] startTrim = new char[] { 'c', 'o', 's', '(' }; /**Znaky, které mají být odstaněny ze začátku řetězce*/
 
-            expression = expression.TrimStart(startTrim);
-            expression = expression.TrimEnd(')');
-            x = Eval(expression);
+            expression = expression.TrimStart(startTrim); //Odstranění nežádoucích charakterů ze začátku řetězce
+            expression = expression.TrimEnd(')'); //Odstranění nežádoucích charakterů na konci řetězce
+            x = Eval(expression); /**vyhodnocené X*/
 
             double result = Math.Round(Math.Cos(x), 6);
             if (double.IsNaN(result))
@@ -444,12 +443,12 @@ namespace Calc
 
             double x = 0;
 
-            char[] startTrim = new char[] { 't', 'a', 'n', '(' };
+            char[] startTrim = new char[] { 't', 'a', 'n', '(' }; /**Znaky, které mají být odstaněny ze začátku řetězce*/
 
-            expression = expression.TrimStart(startTrim);
-            expression = expression.TrimEnd(')');
-            
-            x = Eval(expression);
+            expression = expression.TrimStart(startTrim); //Odstranění nežádoucích charakterů ze začátku řetězce
+            expression = expression.TrimEnd(')'); //Odstranění nežádoucích charakterů na konci řetězce
+
+            x = Eval(expression); /**vyhodnocené X*/
 
             double result = Math.Round(Math.Tan(x), 6);
             if (double.IsNaN(result))
