@@ -8,7 +8,8 @@ test:
 
 profile: 
 	dotnet build ./Calculator
-	./Profiling/bin/debug/netcoreapp3.1/Profiling.exe <input.txt
+	cd Profiling/bin/debug/netcoreapp3.1/
+	Profiling.exe
 
 help:
 

@@ -19,3 +19,24 @@ D:\IVS2\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.csproj.Copy
 D:\IVS2\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.dll
 D:\IVS2\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.pdb
 D:\IVS2\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.genruntimeconfig.cache
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Calc.deps.json
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Calc.runtimeconfig.json
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Calc.runtimeconfig.dev.json
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Calc.exe
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Profiling.exe
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Profiling.deps.json
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Profiling.runtimeconfig.json
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Profiling.runtimeconfig.dev.json
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Profiling.dll
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Profiling.pdb
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Calc.dll
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\bin\Debug\netcoreapp3.1\Calc.pdb
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.csproj.AssemblyReference.cache
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.AssemblyInfoInputs.cache
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.AssemblyInfo.cs
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.csproj.CoreCompileInputs.cache
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.csproj.CopyComplete
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.dll
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.pdb
+C:\Users\definitely not me\source\repos\jirmusovic\IVS_projekt2\src\Profiling\obj\Debug\netcoreapp3.1\Profiling.genruntimeconfig.cache
