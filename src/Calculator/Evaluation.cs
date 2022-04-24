@@ -43,7 +43,8 @@ namespace Calc
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition - 1, true);
                 firstStringPosition = GetSubstringPos(expression, firstStringPosition - 1, false);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                
+                if (found == null)
+                    return double.NaN;
                 expression = expression.Replace(found, Factorial(found));
             }
 
@@ -53,7 +54,8 @@ namespace Calc
                 int lastStringPosition = GetSubstringPos(expression, midPos + 1, true);
                 firstStringPosition = GetSubstringPos(expression, midPos - 1, false);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-
+                if (found == null)
+                    return double.NaN;
                 expression = expression.Replace(found, N_power(found));
             }
 
@@ -61,7 +63,8 @@ namespace Calc
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-
+                if (found == null)
+                    return double.NaN;
                 expression = expression.Replace(found, N_root(found));
             }
             while ((firstStringPosition = expression.IndexOf("sin(")) >= 0)
@@ -338,7 +341,7 @@ namespace Calc
             expression = expression.TrimEnd(')');
             x = Eval(expression);
 
-            double result = Math.Round(Math.Sin(Math.PI * x / 180), 6);
+            double result = Math.Round(Math.Sin(x), 6);
             if (double.IsNaN(result))
                 return null;
             else
@@ -357,7 +360,7 @@ namespace Calc
             expression = expression.TrimEnd(')');
             x = Eval(expression);
 
-            double result = Math.Cos(x);
+            double result = Math.Round(Math.Cos(x), 6);
             if (double.IsNaN(result))
                 return null;
             else
@@ -376,7 +379,7 @@ namespace Calc
             expression = expression.TrimEnd(')');
             x = Eval(expression);
 
-            double result = Math.Tan(x);
+            double result = Math.Round(Math.Tan(x), 6);
             if (double.IsNaN(result))
                 return null;
             else
