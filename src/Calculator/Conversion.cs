@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**
+ *@file Conversion.cs
+ *@brief Třída pro převod čísel mezi soustavami
+ *
+ * 
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +13,12 @@ namespace Calc
 {
     public class Conversion
     {
-        private char[] numList = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+        private char[] numList = new char[] {   '0', '1', '2', '3', '4', '5',
+                                                '6', '7', '8', '9', 'A', 'B', 
+                                                'C', 'D', 'E', 'F', 'G', 'H', 
+                                                'I', 'J', 'K', 'L', 'M', 'N', 
+                                                'O', 'P', 'Q', 'R', 'S', 'T', 
+                                                'U', 'V', 'W', 'X', 'Y', 'Z' }; /** Pole znaků, které jsou použity s různých soustavách*/
         
         public string Convert_from_to(string number, string fromBase, string toBase)
         {
@@ -76,10 +88,19 @@ namespace Calc
                 return number10Base.ToString();
             }
         }
+
+        /**
+         * @brief Funkce na získání pozice prvku v poli
+         * @param array Pole znaků, ve kterém chceme najít shodný znak
+         * @param find Znak, jehož pozici chceme najít
+         * @param limit Omezení procházené oblasti
+         * 
+         * @return V případě nalezení vrací index prvku, v opačném případě vrací -1
+         */
         private static int getIndexOf(char[] array, char find, int limit)
         {
-            int i;
-            for (i = 0; i < array.Length && i < limit; i++)
+            int i; /** Index aktuálně procházeného prvku */
+            for (i = 0; i < array.Length && i < limit; i++) /** Cyklus pro iteraci polem */
             {
                 if (array[i] == find)
                 {
@@ -88,6 +109,5 @@ namespace Calc
             }
             return -1;
         }
-
     }
 }

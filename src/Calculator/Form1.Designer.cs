@@ -171,7 +171,7 @@ namespace Calc
             this.InputCalc.BackColor = System.Drawing.Color.Aquamarine;
             this.InputCalc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.InputCalc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.InputCalc.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.InputCalc.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.InputCalc.Location = new System.Drawing.Point(58, 16);
             this.InputCalc.Name = "InputCalc";
             this.InputCalc.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -184,7 +184,7 @@ namespace Calc
             this.OutputCalc.BackColor = System.Drawing.Color.Aquamarine;
             this.OutputCalc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OutputCalc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.OutputCalc.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.OutputCalc.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OutputCalc.Location = new System.Drawing.Point(58, 73);
             this.OutputCalc.Name = "OutputCalc";
             this.OutputCalc.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -642,7 +642,7 @@ namespace Calc
             this.OutConvert.BackColor = System.Drawing.Color.Aquamarine;
             this.OutConvert.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OutConvert.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.OutConvert.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.OutConvert.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OutConvert.Location = new System.Drawing.Point(58, 244);
             this.OutConvert.Name = "OutConvert";
             this.OutConvert.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -655,7 +655,7 @@ namespace Calc
             this.InConvert.BackColor = System.Drawing.Color.Aquamarine;
             this.InConvert.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.InConvert.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.InConvert.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.InConvert.Font = new System.Drawing.Font("Arial Narrow", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.InConvert.Location = new System.Drawing.Point(58, 52);
             this.InConvert.Name = "InConvert";
             this.InConvert.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -849,7 +849,7 @@ namespace Calc
             this.InDev.BackColor = System.Drawing.Color.Aquamarine;
             this.InDev.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.InDev.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.InDev.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.InDev.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.InDev.Location = new System.Drawing.Point(65, 241);
             this.InDev.Name = "InDev";
             this.InDev.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -862,7 +862,7 @@ namespace Calc
             this.OutDev.BackColor = System.Drawing.Color.Aquamarine;
             this.OutDev.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.OutDev.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.OutDev.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.OutDev.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.OutDev.Location = new System.Drawing.Point(65, 65);
             this.OutDev.Name = "OutDev";
             this.OutDev.RightToLeft = System.Windows.Forms.RightToLeft.No;
