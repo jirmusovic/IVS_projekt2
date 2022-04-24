@@ -116,7 +116,15 @@ namespace MSTest
         public void EvaluationSin()
         {
             var eval = new Evaluation();
-            var result = eval.Sin("");
+            var result = eval.Sin("sin(9.5)");
+            Assert.AreEqual(-0.07515112, 0.00001, double.Parse(result));
+
+        }
+
+        public void EvaluationSinBad()
+        {
+            var eval = new Evaluation();
+            var result = eval.Sin("sin(jklasdasd)");
             Assert.AreEqual(null, result);
 
         }
@@ -125,7 +133,7 @@ namespace MSTest
         public void EvaluationCos()
         {
             var eval = new Evaluation();
-            var result = eval.Evaluate("");
+            var result = eval.Cos("");
             Assert.AreEqual(null, result);
 
         }
@@ -134,19 +142,12 @@ namespace MSTest
         public void EvaluationTan()
         {
             var eval = new Evaluation();
-            var result = eval.Evaluate("");
+            var result = eval.Tan("");
             Assert.AreEqual(null, result);
 
         }
 
-        [TestMethod]
-        public void EvaluationMissingArguments()
-        {
-            var eval = new Evaluation();
-            var result = eval.Evaluate("");
-            Assert.AreEqual(null, result);
-
-        }
+        
 
 
     }
