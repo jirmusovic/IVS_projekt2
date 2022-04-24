@@ -180,7 +180,7 @@ namespace MSTest
         public void EvaluationGoniometricBad()
         {
             var eval = new Evaluation();
-            var result = eval.Evaluate("");
+            var result = eval.Evaluate("5*0-6+12-6+sin(cos(tan()))");
             Assert.AreEqual(null, result);
 
 
