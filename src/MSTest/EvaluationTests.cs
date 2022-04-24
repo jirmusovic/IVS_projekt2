@@ -116,7 +116,7 @@ namespace MSTest
         public void EvaluationSin()
         {
             var eval = new Evaluation();
-            var result = eval.Sin("sin(9.5)");
+            var result = eval.Sin("sin(9.5π)");
             Assert.AreEqual(-0.07515112, 0.00001, double.Parse(result));
 
         }
@@ -133,7 +133,16 @@ namespace MSTest
         public void EvaluationCos()
         {
             var eval = new Evaluation();
-            var result = eval.Cos("");
+            var result = eval.Cos("cos(-987987π)");
+            Assert.AreEqual(0.99570243, 0.00001, double.Parse(result));
+
+        }
+
+        [TestMethod]
+        public void EvaluationCosBad()
+        {
+            var eval = new Evaluation();
+            var result = eval.Cos("cos(asdasdasd*π)");
             Assert.AreEqual(null, result);
 
         }
@@ -142,12 +151,21 @@ namespace MSTest
         public void EvaluationTan()
         {
             var eval = new Evaluation();
-            var result = eval.Tan("");
+            var result = eval.Tan("tan(999999*π)");
+            Assert.AreEqual(-4.61843033, 0.00001, double.Parse(result));
+
+        }
+
+        [TestMethod]
+        public void EvaluationTanBad()
+        {
+            var eval = new Evaluation();
+            var result = eval.Tan("tan()");
             Assert.AreEqual(null, result);
 
         }
 
-        
+
 
 
     }
