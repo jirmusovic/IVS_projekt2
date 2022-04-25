@@ -29,6 +29,7 @@ namespace Calc
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Calculator = new System.Windows.Forms.Button();
             this.Converter = new System.Windows.Forms.Button();
             this.Deviation = new System.Windows.Forms.Button();
@@ -898,6 +899,7 @@ namespace Calc
             this.Controls.Add(this.Converter);
             this.Controls.Add(this.Calculator);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Calculator";
