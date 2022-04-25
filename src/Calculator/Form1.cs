@@ -22,10 +22,8 @@ namespace Calc
 
     public partial class Form1 : Form
     {
-        private string deviation_input;
-        public Form1(string input)
+        public Form1()
         {
-            deviation_input = input;
             InitializeComponent();
         }
         
@@ -64,15 +62,7 @@ namespace Calc
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (deviation_input != String.Empty)
-            {
-                Switch_active_window((int)Window.DEVIATION);
-
-                if (deviation_input != null)
-                    OutDev.Text = deviation_input;
-                else
-                    OutDev.Text = "Chyba vstupu!";
-            }
+            
         }
 
         private void output_TextChanged(object sender, EventArgs e)

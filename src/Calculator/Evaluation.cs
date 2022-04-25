@@ -56,7 +56,7 @@ namespace Calc
                 string result = Factorial(found);
                 if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, result);
+                expression = expression.Replace(found, result.Replace(',', '.'));
             }
 
             while ((firstStringPosition = expression.IndexOf('^')) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů faktoriálu
@@ -68,7 +68,7 @@ namespace Calc
                 string result = N_power(found);
                 if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, result);
+                expression = expression.Replace(found, result.Replace(',', '.'));
             }
 
             while ((firstStringPosition = expression.IndexOf("f(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů odmocnin
@@ -78,34 +78,43 @@ namespace Calc
                 string result = N_root(found);
                 if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, result);
+                expression = expression.Replace(found, result.Replace(',', '.'));
+            }
+            while ((firstStringPosition = expression.IndexOf("log(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů dekadických logaritmů
+            {
+                int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
+                string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
+                string result = Log(found);
+                if (result == null)
+                    return double.NaN;
+                expression = expression.Replace(found, result.Replace(',', '.'));
             }
             while ((firstStringPosition = expression.IndexOf("sin(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů sin
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                string result = Sin(found).Replace(',', '.');
+                string result = Sin(found);
                 if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, result);
+                expression = expression.Replace(found, result.Replace(',', '.'));
             }
             while ((firstStringPosition = expression.IndexOf("cos(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů cos
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                string result = Cos(found).Replace(',', '.');
+                string result = Cos(found);
                 if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, result);
+                expression = expression.Replace(found, result.Replace(',', '.'));
             }
             while ((firstStringPosition = expression.IndexOf("tan(")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů tan
             {
                 int lastStringPosition = GetSubstringPos(expression, firstStringPosition, true);
                 string found = expression.Substring(firstStringPosition, lastStringPosition - firstStringPosition + 1);
-                string result = Tan(found).Replace(',', '.'); 
+                string result = Tan(found); 
                 if (result == null)
                     return double.NaN;
-                expression = expression.Replace(found, result);
+                expression = expression.Replace(found, result.Replace(',', '.'));
             }
             while ((firstStringPosition = expression.IndexOf("π")) >= 0) //Cyklus pro odhalení a nahrazení všech výskytů zanku π
             {
@@ -455,6 +464,27 @@ namespace Calc
                 return null;
             else
                 return result.ToString();
+        }
+
+        public string Log(string expression)
+        {
+            expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
+
+            double x = 0;
+
+            char[] startTrim = new char[] { 'l', 'o', 'g', '(' }; /**Znaky, které mají být odstaněny ze začátku řetězce*/
+
+            expression = expression.TrimStart(startTrim); //Odstranění nežádoucích charakterů ze začátku řetězce
+            expression = expression.TrimEnd(')'); //Odstranění nežádoucích charakterů na konci řetězce
+
+            x = Eval(expression); /**vyhodnocené X*/
+
+
+                double result = Math.Round(Math.Log10(x), 6);
+            if (double.IsNaN(result))
+                return null;
+            else
+                return result.ToString().Replace(',', '.');
         }
 
         /**
