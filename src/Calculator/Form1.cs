@@ -121,5 +121,87 @@ namespace Calc
             
             
         }
+
+        private void ClearAll_Click(object sender, EventArgs e)
+        {
+            InputCalc.Text = String.Empty;
+            OutputCalc.Text = String.Empty;
+        }
+
+        private void Backspace_Click(object sender, EventArgs e)
+        {
+            if (InputCalc.Text.Length > 0) 
+                InputCalc.Text = InputCalc.Text.Substring(0, InputCalc.Text.Length - 1);
+        }
+
+        private void operator_click(object sender, EventArgs e)
+        {
+            Button clicked = (Button)sender;
+            if (InputCalc.Text.Length > 0 && InputCalc.Text != "-")
+            {
+                char tmp = InputCalc.Text[InputCalc.Text.Length - 1];
+                if (tmp == '+' || tmp == '-' || tmp == '*' || tmp == '/' || tmp == '/')
+                {
+                    InputCalc.Text = InputCalc.Text.Substring(0, InputCalc.Text.Length - 1);
+                }
+                if (clicked.Text[0] == 'X')
+                    InputCalc.Text += '*';
+                else
+                    InputCalc.Text += clicked.Text;
+            }
+            if (InputCalc.Text.Length == 0 && clicked.Text == "-")
+                InputCalc.Text += "-";
+        }
+
+        private void funkc_click(object sender, EventArgs e)
+        {
+            Button clicked = (Button)sender;
+            if (InputCalc.Text.Length > 0)
+            {
+                char tmp = InputCalc.Text[InputCalc.Text.Length - 1];
+                if (!(tmp == '+' || tmp == '-' || tmp == '*' || tmp == '/' || tmp == '(' || tmp == '/'))
+                {
+                    InputCalc.Text += '*';
+                }
+            }
+            InputCalc.Text += clicked.Text + '(';
+        }
+
+        private void Exp10_Click(object sender, EventArgs e)
+        {
+            if (InputCalc.Text.Length > 0)
+            {
+                char tmp = InputCalc.Text[InputCalc.Text.Length - 1];
+                if (tmp == '+' || tmp == '-' || tmp == '*' || tmp == '/' || tmp == '(' || tmp == '/')
+                {
+                    InputCalc.Text = InputCalc.Text.Substring(0, InputCalc.Text.Length - 1);
+                }
+              
+                InputCalc.Text += "*10^";
+            }
+        }
+
+        private void Exponent_Click(object sender, EventArgs e)
+        {
+            if (InputCalc.Text.Length > 0)
+            {
+                char tmp = InputCalc.Text[InputCalc.Text.Length - 1];
+                if (tmp == '+' || tmp == '-' || tmp == '*' || tmp == '/' || tmp == '(' || tmp == '/')
+                {
+                    InputCalc.Text = InputCalc.Text.Substring(0, InputCalc.Text.Length - 1);
+                }
+
+                InputCalc.Text += '^';
+            }
+        }
+
+        private void PlusMinus_Click(object sender, EventArgs e)
+        {
+            Evaluation eval = new Evaluation();
+            if (InputCalc.Text.Length >= 4 && eval.RemoveNotNecessaryBrackets(InputCalc.Text.TrimStart('-')) == InputCalc.Text.Substring(2, InputCalc.Text.Length - 3))
+                InputCalc.Text = InputCalc.Text.Substring(2, InputCalc.Text.Length - 3);
+            else if(InputCalc.Text.Length > 0)
+                InputCalc.Text = "-(" + InputCalc.Text + ")";
+        }
     }
 }

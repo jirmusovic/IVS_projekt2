@@ -121,3 +121,4 @@ namespace Calc
         }
     }
 }
+/*** Konec souboru Conversion.cs ***/

@@ -30,3 +30,5 @@ namespace Calc
         }
     }
 }
+/*** Konec souboru Program.cs ***/
+
