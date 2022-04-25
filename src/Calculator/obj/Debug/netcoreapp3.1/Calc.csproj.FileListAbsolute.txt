@@ -113,3 +113,4 @@ C:\Users\Michal\Source\Repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\ne
 C:\Users\Michal\Source\Repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.dll
 C:\Users\Michal\Source\Repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.pdb
 C:\Users\Michal\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.genruntimeconfig.cache
+C:\Users\mothv\source\repos\jirmusovic\IVS_projekt2\src\Calculator\obj\Debug\netcoreapp3.1\Calc.Properties.Resources.resources
