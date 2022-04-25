@@ -260,19 +260,25 @@ namespace Calc
             expression = expression.Replace(" ", String.Empty); // Odstranění bílých znaků
 
             double numDouble = Eval(expression.TrimEnd('!'));
-            int num = -1;
-            if (Math.Abs(numDouble % 1) <= Double.Epsilon * 100)
+            ulong num = 1;
+            if (Math.Abs(numDouble % 1) <= Double.Epsilon * 1000 && numDouble >= 0)
             {
-                num = Convert.ToInt32(numDouble);
+                num = Convert.ToUInt64(numDouble);
             }
+            else
+                return null;
 
             if (num < 0)
             {
                 return null;
             }
-            int result = 1;
+            ulong result = 1;
             for (; num > 0; num--)
             {
+                if(ulong.MaxValue / num < result)
+                {
+                    return null;
+                }
                 result *= num;
             }
 
@@ -340,6 +346,12 @@ namespace Calc
                         {
                             if (expression[i - 1] == 'f')
                                 return i - 1;
+                            if (i >= 3)
+                            {
+                                string sub = expression.Substring(i - 3, 4);
+                                if (sub == "sin(" || sub == "tan(" || sub == "cos(" || sub == "log(")
+                                    return i - 3;
+                            }
                         }
                         return i;
                     }
