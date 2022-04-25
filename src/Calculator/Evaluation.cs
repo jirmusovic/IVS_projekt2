@@ -164,6 +164,7 @@ namespace Calc
          */
         private double StringToNum(string expression)
         {
+            expression = expression.Replace(',', '.');
             DataTable table = new DataTable();
             double res;
             try
@@ -174,7 +175,8 @@ namespace Calc
             {
                 res = double.NaN;
             }
-
+            if (double.IsInfinity(res))
+                return double.NaN;
             return res;
         }
 
