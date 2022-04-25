@@ -363,7 +363,7 @@ namespace Calc
          * @param expression Textový výraz
          * @return Výraz bez okrajových závorek
          */
-        private string RemoveNotNecessaryBrackets(string expression)
+        public string RemoveNotNecessaryBrackets(string expression)
         {
             if (expression.Length <= 2)
             {
