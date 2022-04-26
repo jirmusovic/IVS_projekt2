@@ -29,6 +29,7 @@ namespace Calc
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Calculator = new System.Windows.Forms.Button();
             this.Converter = new System.Windows.Forms.Button();
             this.Deviation = new System.Windows.Forms.Button();
@@ -205,6 +206,7 @@ namespace Calc
             this.Exp10.TabIndex = 74;
             this.Exp10.Text = "Exp";
             this.Exp10.UseVisualStyleBackColor = false;
+            this.Exp10.Click += new System.EventHandler(this.Exp10_Click);
             // 
             // RightBracket
             // 
@@ -218,6 +220,7 @@ namespace Calc
             this.RightBracket.TabIndex = 73;
             this.RightBracket.Text = ")";
             this.RightBracket.UseVisualStyleBackColor = false;
+            this.RightBracket.Click += new System.EventHandler(this.number_click);
             // 
             // LeftBracket
             // 
@@ -231,6 +234,7 @@ namespace Calc
             this.LeftBracket.TabIndex = 72;
             this.LeftBracket.Text = "(";
             this.LeftBracket.UseVisualStyleBackColor = false;
+            this.LeftBracket.Click += new System.EventHandler(this.number_click);
             // 
             // Exponent
             // 
@@ -244,6 +248,7 @@ namespace Calc
             this.Exponent.TabIndex = 71;
             this.Exponent.Text = " x^n";
             this.Exponent.UseVisualStyleBackColor = false;
+            this.Exponent.Click += new System.EventHandler(this.Exponent_Click);
             // 
             // Sqrt
             // 
@@ -270,6 +275,7 @@ namespace Calc
             this.Fact.TabIndex = 69;
             this.Fact.Text = "!";
             this.Fact.UseVisualStyleBackColor = false;
+            this.Fact.Click += new System.EventHandler(this.operator_click);
             // 
             // Tan
             // 
@@ -283,6 +289,7 @@ namespace Calc
             this.Tan.TabIndex = 68;
             this.Tan.Text = "tan";
             this.Tan.UseVisualStyleBackColor = false;
+            this.Tan.Click += new System.EventHandler(this.funkc_click);
             // 
             // Cos
             // 
@@ -296,6 +303,7 @@ namespace Calc
             this.Cos.TabIndex = 67;
             this.Cos.Text = "cos";
             this.Cos.UseVisualStyleBackColor = false;
+            this.Cos.Click += new System.EventHandler(this.funkc_click);
             // 
             // Sin
             // 
@@ -309,6 +317,7 @@ namespace Calc
             this.Sin.TabIndex = 66;
             this.Sin.Text = "sin";
             this.Sin.UseVisualStyleBackColor = false;
+            this.Sin.Click += new System.EventHandler(this.funkc_click);
             // 
             // Pi
             // 
@@ -320,7 +329,7 @@ namespace Calc
             this.Pi.Name = "Pi";
             this.Pi.Size = new System.Drawing.Size(60, 38);
             this.Pi.TabIndex = 65;
-            this.Pi.Text = " π";
+            this.Pi.Text = "π";
             this.Pi.UseVisualStyleBackColor = false;
             this.Pi.Click += new System.EventHandler(this.number_click);
             // 
@@ -336,6 +345,7 @@ namespace Calc
             this.Log.TabIndex = 64;
             this.Log.Text = "log";
             this.Log.UseVisualStyleBackColor = false;
+            this.Log.Click += new System.EventHandler(this.funkc_click);
             // 
             // E
             // 
@@ -364,6 +374,7 @@ namespace Calc
             this.Backspace.TabIndex = 62;
             this.Backspace.Text = "<—";
             this.Backspace.UseVisualStyleBackColor = false;
+            this.Backspace.Click += new System.EventHandler(this.Backspace_Click);
             // 
             // Comma
             // 
@@ -376,7 +387,7 @@ namespace Calc
             this.Comma.TabIndex = 61;
             this.Comma.Text = ",";
             this.Comma.UseVisualStyleBackColor = true;
-            this.Comma.Click += new System.EventHandler(this.number_click);
+            this.Comma.Click += new System.EventHandler(this.operator_click);
             // 
             // Num0
             // 
@@ -520,6 +531,7 @@ namespace Calc
             this.Mul.TabIndex = 50;
             this.Mul.Text = "X";
             this.Mul.UseVisualStyleBackColor = false;
+            this.Mul.Click += new System.EventHandler(this.operator_click);
             // 
             // Sub
             // 
@@ -533,6 +545,7 @@ namespace Calc
             this.Sub.TabIndex = 49;
             this.Sub.Text = "-";
             this.Sub.UseVisualStyleBackColor = false;
+            this.Sub.Click += new System.EventHandler(this.operator_click);
             // 
             // Add
             // 
@@ -546,6 +559,7 @@ namespace Calc
             this.Add.TabIndex = 48;
             this.Add.Text = "+";
             this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.operator_click);
             // 
             // Eq
             // 
@@ -573,6 +587,7 @@ namespace Calc
             this.Div.TabIndex = 46;
             this.Div.Text = "/";
             this.Div.UseVisualStyleBackColor = false;
+            this.Div.Click += new System.EventHandler(this.operator_click);
             // 
             // PlusMinus
             // 
@@ -587,6 +602,7 @@ namespace Calc
             this.PlusMinus.TabIndex = 45;
             this.PlusMinus.Text = "+/-";
             this.PlusMinus.UseVisualStyleBackColor = false;
+            this.PlusMinus.Click += new System.EventHandler(this.PlusMinus_Click);
             // 
             // ClearAll
             // 
@@ -601,6 +617,7 @@ namespace Calc
             this.ClearAll.TabIndex = 42;
             this.ClearAll.Text = "CA";
             this.ClearAll.UseVisualStyleBackColor = false;
+            this.ClearAll.Click += new System.EventHandler(this.ClearAll_Click);
             // 
             // ConverterGroupBox
             // 
@@ -882,6 +899,7 @@ namespace Calc
             this.Controls.Add(this.Converter);
             this.Controls.Add(this.Calculator);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Calculator";

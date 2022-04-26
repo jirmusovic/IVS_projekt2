@@ -51,3 +51,5 @@ namespace Calc
         }
     }
 }
+/*** Konec souboru Deviation.cs ***/
+
