@@ -44,7 +44,7 @@ namespace Calc
             {
                 return null;
             }
-            if (from > 36 || to > 36) //Ověření korektního vstupu
+            if (from > 36 || to > 36  || from < 2 || to < 2) //Ověření korektního vstupu
             {
                 return null;
             }

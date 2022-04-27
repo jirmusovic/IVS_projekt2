@@ -23,6 +23,7 @@ namespace Calc
         public string StdDeviation(string expression)
         {
             expression = expression.Replace('\t', ' ');
+            expression = expression.Replace('\n', ' ');
             while (expression.IndexOf("  ") >= 0)
                 expression = expression.Replace("  ", " ");
             expression = expression.Trim();
