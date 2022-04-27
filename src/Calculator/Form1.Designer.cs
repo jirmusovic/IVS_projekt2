@@ -86,6 +86,7 @@ namespace Calc
             this.FilePath = new System.Windows.Forms.TextBox();
             this.InDev = new System.Windows.Forms.RichTextBox();
             this.OutDev = new System.Windows.Forms.RichTextBox();
+            this.HelpButton = new System.Windows.Forms.Button();
             this.CalculatorGroupBox.SuspendLayout();
             this.ConverterGroupBox.SuspendLayout();
             this.DeviationGroupBox.SuspendLayout();
@@ -93,37 +94,41 @@ namespace Calc
             // 
             // Calculator
             // 
+            this.Calculator.BackgroundImage = global::Calc.Properties.Resources.Calculator_button;
+            this.Calculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Calculator.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Calculator.Location = new System.Drawing.Point(24, 61);
+            this.Calculator.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Calculator.Location = new System.Drawing.Point(24, 57);
             this.Calculator.Margin = new System.Windows.Forms.Padding(4);
             this.Calculator.Name = "Calculator";
-            this.Calculator.Size = new System.Drawing.Size(35, 110);
+            this.Calculator.Size = new System.Drawing.Size(35, 114);
             this.Calculator.TabIndex = 26;
-            this.Calculator.Text = "Calculator";
             this.Calculator.UseVisualStyleBackColor = true;
             this.Calculator.Click += new System.EventHandler(this.Calculator_Click);
             // 
             // Converter
             // 
+            this.Converter.BackgroundImage = global::Calc.Properties.Resources.Converter_button;
+            this.Converter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Converter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Converter.Location = new System.Drawing.Point(24, 178);
             this.Converter.Margin = new System.Windows.Forms.Padding(4);
             this.Converter.Name = "Converter";
             this.Converter.Size = new System.Drawing.Size(35, 110);
             this.Converter.TabIndex = 27;
-            this.Converter.Text = "Converter";
             this.Converter.UseVisualStyleBackColor = true;
             this.Converter.Click += new System.EventHandler(this.Converter_Click);
             // 
             // Deviation
             // 
+            this.Deviation.BackgroundImage = global::Calc.Properties.Resources.Deviation_button;
+            this.Deviation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Deviation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Deviation.Location = new System.Drawing.Point(24, 295);
             this.Deviation.Margin = new System.Windows.Forms.Padding(4);
             this.Deviation.Name = "Deviation";
             this.Deviation.Size = new System.Drawing.Size(35, 110);
             this.Deviation.TabIndex = 28;
-            this.Deviation.Text = "Deviation";
             this.Deviation.UseVisualStyleBackColor = true;
             this.Deviation.Click += new System.EventHandler(this.Deviation_Click);
             // 
@@ -162,7 +167,7 @@ namespace Calc
             this.CalculatorGroupBox.Controls.Add(this.Div);
             this.CalculatorGroupBox.Controls.Add(this.PlusMinus);
             this.CalculatorGroupBox.Controls.Add(this.ClearAll);
-            this.CalculatorGroupBox.Location = new System.Drawing.Point(66, 41);
+            this.CalculatorGroupBox.Location = new System.Drawing.Point(66, 37);
             this.CalculatorGroupBox.Name = "CalculatorGroupBox";
             this.CalculatorGroupBox.Size = new System.Drawing.Size(592, 381);
             this.CalculatorGroupBox.TabIndex = 42;
@@ -635,7 +640,7 @@ namespace Calc
             this.ConverterGroupBox.Controls.Add(this.Convert);
             this.ConverterGroupBox.Controls.Add(this.ToBase);
             this.ConverterGroupBox.Controls.Add(this.FromBase);
-            this.ConverterGroupBox.Location = new System.Drawing.Point(66, 41);
+            this.ConverterGroupBox.Location = new System.Drawing.Point(66, 37);
             this.ConverterGroupBox.Name = "ConverterGroupBox";
             this.ConverterGroupBox.Size = new System.Drawing.Size(592, 381);
             this.ConverterGroupBox.TabIndex = 44;
@@ -664,7 +669,7 @@ namespace Calc
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(374, 139);
+            this.label2.Location = new System.Drawing.Point(367, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 15);
             this.label2.TabIndex = 79;
@@ -820,7 +825,7 @@ namespace Calc
             this.DeviationGroupBox.Controls.Add(this.FilePath);
             this.DeviationGroupBox.Controls.Add(this.InDev);
             this.DeviationGroupBox.Controls.Add(this.OutDev);
-            this.DeviationGroupBox.Location = new System.Drawing.Point(66, 41);
+            this.DeviationGroupBox.Location = new System.Drawing.Point(66, 37);
             this.DeviationGroupBox.Name = "DeviationGroupBox";
             this.DeviationGroupBox.Size = new System.Drawing.Size(592, 381);
             this.DeviationGroupBox.TabIndex = 45;
@@ -917,11 +922,23 @@ namespace Calc
             this.OutDev.TabIndex = 78;
             this.OutDev.Text = "";
             // 
+            // HelpButton
+            // 
+            this.HelpButton.BackColor = System.Drawing.Color.Aquamarine;
+            this.HelpButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HelpButton.Location = new System.Drawing.Point(583, 12);
+            this.HelpButton.Name = "HelpButton";
+            this.HelpButton.Size = new System.Drawing.Size(75, 23);
+            this.HelpButton.TabIndex = 0;
+            this.HelpButton.Text = "Help";
+            this.HelpButton.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 461);
+            this.Controls.Add(this.HelpButton);
             this.Controls.Add(this.ConverterGroupBox);
             this.Controls.Add(this.DeviationGroupBox);
             this.Controls.Add(this.CalculatorGroupBox);
@@ -1003,6 +1020,7 @@ namespace Calc
         private System.Windows.Forms.Label LabelOutput;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button HelpButton;
     }
 }
 
