@@ -1,0 +1,22 @@
+Calculator - help:
+    Kalkulaèka umožòuje výpoèet celého matematického výrazu zadaného do pole Input.
+    Základní vstup mùže být proveden pomocí klávesnice nebo s využitím zobrazeného èíselníku.
+    Aby byl výpoèet správnì proveden, musí být správnì zadán vstupní výraz (správnì použité závorky, pouze jedna desetinná teèka v èísle, èárkou oddìlené operandy v odmocninì)
+    Pokud se odhalí chyba v syntaxi nebo matematická chyba pøi výpoètu, vypíše se na výstup kalkulaèky chybová hláška ERROR.
+    Pøi zadávání odmocniny se stiskem levého tlaèítka myši na symbol odmocniny vepíše do vstupu "f(" a stiskem pravého tlaèítka myši èárka dìlící operandy. Odmocnina je ve tvaru "f(výraz pod odmocninou, hodnota odmocniny)".
+
+Converter - help:
+    Input: požadované èíslo, které se bude pøevádìt
+    Ouput: výsledný pøevod
+    From base: výbìr zadané báze
+    To base: požadovaná báze
+    Convert: provede pøevod mezi èíselnými soustavami pouze pokud budou splnìny náležitosti (neprázdný Input, From base a To base)
+    Chybové stavy: vstupní báze se neshoduje se zadaným Inputem, pøíliš dlouhá èísla
+
+Deviation - help:
+    Own input: zadání vlastních hodnot pro výpoèet smìrodatné odchylky (jednotlivé hodnoty jsou oddìleny bílými znaky)
+    Output: výbìrová smìrodatná odchylka ze zadaných hodnot
+    Choose a file: otevøe se okno pro výbìr textového souboru, ve kterém jsou zadány vstupní hodnoty
+    Input from file: cesta k vybranému souboru
+    Calculate: provede se výpoèet smìrodatné odchylky
+    Chybové stavy: prázdný vstup, vstupní hodnoty nejsou èísla
