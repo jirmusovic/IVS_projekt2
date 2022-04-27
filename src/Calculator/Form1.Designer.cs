@@ -668,7 +668,7 @@ namespace Calc
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(374, 139);
+            this.label2.Location = new System.Drawing.Point(367, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 15);
             this.label2.TabIndex = 79;
