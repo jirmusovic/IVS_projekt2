@@ -2,6 +2,8 @@
  * @file Form1.cs
  * 
  * @brief Funkce pro interakci s grafickým rozhraním
+ * 
+ * @date 28-04-2022
  */
 
 using System;
