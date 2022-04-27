@@ -40,7 +40,7 @@ namespace Calc
             this.RightBracket = new System.Windows.Forms.Button();
             this.LeftBracket = new System.Windows.Forms.Button();
             this.Exponent = new System.Windows.Forms.Button();
-            this.Sqrt = new System.Windows.Forms.Button();
+            this.NRoot = new System.Windows.Forms.Button();
             this.Fact = new System.Windows.Forms.Button();
             this.Tan = new System.Windows.Forms.Button();
             this.Cos = new System.Windows.Forms.Button();
@@ -133,7 +133,7 @@ namespace Calc
             this.CalculatorGroupBox.Controls.Add(this.RightBracket);
             this.CalculatorGroupBox.Controls.Add(this.LeftBracket);
             this.CalculatorGroupBox.Controls.Add(this.Exponent);
-            this.CalculatorGroupBox.Controls.Add(this.Sqrt);
+            this.CalculatorGroupBox.Controls.Add(this.NRoot);
             this.CalculatorGroupBox.Controls.Add(this.Fact);
             this.CalculatorGroupBox.Controls.Add(this.Tan);
             this.CalculatorGroupBox.Controls.Add(this.Cos);
@@ -250,18 +250,20 @@ namespace Calc
             this.Exponent.UseVisualStyleBackColor = false;
             this.Exponent.Click += new System.EventHandler(this.Exponent_Click);
             // 
-            // Sqrt
+            // NRoot
             // 
-            this.Sqrt.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.Sqrt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Sqrt.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Sqrt.Location = new System.Drawing.Point(367, 277);
-            this.Sqrt.Margin = new System.Windows.Forms.Padding(4);
-            this.Sqrt.Name = "Sqrt";
-            this.Sqrt.Size = new System.Drawing.Size(60, 38);
-            this.Sqrt.TabIndex = 70;
-            this.Sqrt.Text = "√";
-            this.Sqrt.UseVisualStyleBackColor = false;
+            this.NRoot.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.NRoot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NRoot.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.NRoot.Location = new System.Drawing.Point(367, 277);
+            this.NRoot.Margin = new System.Windows.Forms.Padding(4);
+            this.NRoot.Name = "NRoot";
+            this.NRoot.Size = new System.Drawing.Size(60, 38);
+            this.NRoot.TabIndex = 70;
+            this.NRoot.Text = "√";
+            this.NRoot.UseVisualStyleBackColor = false;
+            this.NRoot.Click += new System.EventHandler(this.NRoot_Click);
+            this.NRoot.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NRoot_MouseDown);
             // 
             // Fact
             // 
@@ -385,7 +387,7 @@ namespace Calc
             this.Comma.Name = "Comma";
             this.Comma.Size = new System.Drawing.Size(60, 38);
             this.Comma.TabIndex = 61;
-            this.Comma.Text = ",";
+            this.Comma.Text = ".";
             this.Comma.UseVisualStyleBackColor = true;
             this.Comma.Click += new System.EventHandler(this.operator_click);
             // 
@@ -891,7 +893,7 @@ namespace Calc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1206, 874);
+            this.ClientSize = new System.Drawing.Size(1206, 791);
             this.Controls.Add(this.ConverterGroupBox);
             this.Controls.Add(this.DeviationGroupBox);
             this.Controls.Add(this.CalculatorGroupBox);
@@ -922,7 +924,7 @@ namespace Calc
         private System.Windows.Forms.Button RightBracket;
         private System.Windows.Forms.Button LeftBracket;
         private System.Windows.Forms.Button Exponent;
-        private System.Windows.Forms.Button Sqrt;
+        private System.Windows.Forms.Button NRoot;
         private System.Windows.Forms.Button Fact;
         private System.Windows.Forms.Button Tan;
         private System.Windows.Forms.Button Cos;

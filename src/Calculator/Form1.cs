@@ -203,5 +203,25 @@ namespace Calc
             else if(InputCalc.Text.Length > 0)
                 InputCalc.Text = "-(" + InputCalc.Text + ")";
         }
+
+        private void NRoot_Click(object sender, EventArgs e)
+        {
+            Button clicked = (Button)sender;
+            if (InputCalc.Text.Length > 0)
+            {
+                char tmp = InputCalc.Text[InputCalc.Text.Length - 1];
+                if (!(tmp == '+' || tmp == '-' || tmp == '*' || tmp == '/' || tmp == '(' || tmp == '/'))
+                {
+                    InputCalc.Text += '*';
+                }
+            }
+            InputCalc.Text += "f(";
+        }
+
+        private void NRoot_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right && InputCalc.Text.Length > 2 && InputCalc.Text[InputCalc.Text.Length - 1] != ',') 
+                InputCalc.Text += ",";
+        }
     }
 }

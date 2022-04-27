@@ -35,3 +35,5 @@
 /src/bin/Debug/netcoreapp3.1/
 /src/obj/Debug/netcoreapp3.1/
 /src/Calculator/bin/Debug/netcoreapp3.1/
+/src/Profiling/bin/Debug/netcoreapp3.1/input2.txt
+/src/Profiling/bin/Debug/netcoreapp3.1/vystup.txt
