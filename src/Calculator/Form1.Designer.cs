@@ -86,6 +86,7 @@ namespace Calc
             this.FilePath = new System.Windows.Forms.TextBox();
             this.InDev = new System.Windows.Forms.RichTextBox();
             this.OutDev = new System.Windows.Forms.RichTextBox();
+            this.HelpButton = new System.Windows.Forms.Button();
             this.CalculatorGroupBox.SuspendLayout();
             this.ConverterGroupBox.SuspendLayout();
             this.DeviationGroupBox.SuspendLayout();
@@ -166,7 +167,7 @@ namespace Calc
             this.CalculatorGroupBox.Controls.Add(this.Div);
             this.CalculatorGroupBox.Controls.Add(this.PlusMinus);
             this.CalculatorGroupBox.Controls.Add(this.ClearAll);
-            this.CalculatorGroupBox.Location = new System.Drawing.Point(66, 41);
+            this.CalculatorGroupBox.Location = new System.Drawing.Point(66, 37);
             this.CalculatorGroupBox.Name = "CalculatorGroupBox";
             this.CalculatorGroupBox.Size = new System.Drawing.Size(592, 381);
             this.CalculatorGroupBox.TabIndex = 42;
@@ -639,7 +640,7 @@ namespace Calc
             this.ConverterGroupBox.Controls.Add(this.Convert);
             this.ConverterGroupBox.Controls.Add(this.ToBase);
             this.ConverterGroupBox.Controls.Add(this.FromBase);
-            this.ConverterGroupBox.Location = new System.Drawing.Point(66, 41);
+            this.ConverterGroupBox.Location = new System.Drawing.Point(66, 37);
             this.ConverterGroupBox.Name = "ConverterGroupBox";
             this.ConverterGroupBox.Size = new System.Drawing.Size(592, 381);
             this.ConverterGroupBox.TabIndex = 44;
@@ -824,7 +825,7 @@ namespace Calc
             this.DeviationGroupBox.Controls.Add(this.FilePath);
             this.DeviationGroupBox.Controls.Add(this.InDev);
             this.DeviationGroupBox.Controls.Add(this.OutDev);
-            this.DeviationGroupBox.Location = new System.Drawing.Point(66, 41);
+            this.DeviationGroupBox.Location = new System.Drawing.Point(66, 37);
             this.DeviationGroupBox.Name = "DeviationGroupBox";
             this.DeviationGroupBox.Size = new System.Drawing.Size(592, 381);
             this.DeviationGroupBox.TabIndex = 45;
@@ -921,11 +922,23 @@ namespace Calc
             this.OutDev.TabIndex = 78;
             this.OutDev.Text = "";
             // 
+            // HelpButton
+            // 
+            this.HelpButton.BackColor = System.Drawing.Color.Aquamarine;
+            this.HelpButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HelpButton.Location = new System.Drawing.Point(583, 12);
+            this.HelpButton.Name = "HelpButton";
+            this.HelpButton.Size = new System.Drawing.Size(75, 23);
+            this.HelpButton.TabIndex = 0;
+            this.HelpButton.Text = "Help";
+            this.HelpButton.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 461);
+            this.Controls.Add(this.HelpButton);
             this.Controls.Add(this.ConverterGroupBox);
             this.Controls.Add(this.DeviationGroupBox);
             this.Controls.Add(this.CalculatorGroupBox);
@@ -1007,6 +1020,7 @@ namespace Calc
         private System.Windows.Forms.Label LabelOutput;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button HelpButton;
     }
 }
 
