@@ -1,3 +1,11 @@
+/**
+ * @file ConversionTests.cs
+ * @class ConversionTest
+ * 
+ * @brief Sada testù pro pøevod mezi èíselnými soustavami
+ * 
+ * @date 28-04-2022
+ */
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Calc;
 using System;
@@ -7,16 +15,19 @@ namespace MSTest
     [TestClass]
     public class ConversionTests
     {
+        /**
+         * @test Testování pøevodù z desítkové do osmièkové soustavy
+         */
         [TestMethod]
         public void From10base()
         {
-            // Arange
             var convert = new Conversion();
-            // Act
             var result = convert.Convert_from_to("256", "10", "8");
-            // Assert
             Assert.IsTrue(result == "400");
         }
+        /**
+         * @test Testování pøevodù z desítkové do osmièkové soustavy se špatnì zadanou vstupní hodnotou
+         */
         [TestMethod]
         public void From10baseBad()
         {
@@ -24,7 +35,9 @@ namespace MSTest
             var result = convert.Convert_from_to("M", "10", "8");
             Assert.IsTrue(result == null);
         }
-
+        /**
+         * @test Testování pøevodù z dvojkové do desítkové soustavy
+         */
         [TestMethod]
         public void From2base()
         {
@@ -32,7 +45,9 @@ namespace MSTest
             var result = convert.Convert_from_to("1111100000111110000011111", "2", "10");
             Assert.IsTrue(result == "32537631");
         }
-
+        /**
+         * @test Testování pøevodù z dvojkové do desítkové soustavy se špatnì zadanou vstupní hodnotou
+         */
         [TestMethod]
         public void From2baseBad()
         {
@@ -40,7 +55,9 @@ namespace MSTest
             var result = convert.Convert_from_to("1111100000111210000011111", "2", "10");
             Assert.IsTrue(result == null);
         }
-
+        /**
+         * @test Testování pøevodù z šestnáctkové do dvojkové soustavy
+         */
         [TestMethod]
         public void From16base()
         {
@@ -48,7 +65,9 @@ namespace MSTest
             var result = convert.Convert_from_to("ff89e", "16", "2");
             Assert.IsTrue(result == "11111111100010011110");
         }
-
+        /**
+         * @test Testování pøevodù z šestnáctkové do dvojkové soustavy se špatnì zadanou vstupní hodnotou
+         */
         [TestMethod]
         public void From16baseBad()
         {
@@ -56,9 +75,9 @@ namespace MSTest
             var result = convert.Convert_from_to("ZZZ", "16", "2");
             Assert.IsTrue(result == null);
         }
-
-     
-
+        /**
+         * @test Testování pøevodù z šestnáctkové do dvojkové soustavy
+         */
         [TestMethod]
         public void Fromrandom1()
         {
@@ -66,7 +85,9 @@ namespace MSTest
             var result = convert.Convert_from_to("g18", "24", "9");
             Assert.IsTrue(result == "13615");
         }
-
+        /**
+         * @test Testování pøevodù z tøícetipìtkové do tøicetišestkové soustavy se špatnì zadanou vstupní hodnotou
+         */
         [TestMethod]
         public void Fromrandom2bad()
         {
@@ -74,7 +95,9 @@ namespace MSTest
             var result = convert.Convert_from_to("Z1313", "35", "36");
             Assert.IsTrue(result == null);
         }
-
+        /**
+         * @test Testování pøevodù z desítkové báze do desítkové baze se špatnì zadanou vstupní hodnotou
+         */
         [TestMethod]
         public void Fromrandom3bad()
         {

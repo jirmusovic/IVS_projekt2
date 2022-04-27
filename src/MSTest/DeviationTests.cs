@@ -1,4 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿/**
+ * @file DeviationTests.cs
+ * @class DeviationTests
+ * 
+ * @brief Sada testů pro směrodatnou odchylku
+ * 
+ * @date 28-04-2022
+ */
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Calc;
 using System;
 
@@ -7,6 +16,9 @@ namespace MSTest
     [TestClass]
     public class DeviationTests
     {
+        /**
+         * @test Testování směrodatné odchylky pro dest celých kladných čísel
+         */
         [TestMethod]
         public void Deviation10num()
         {
@@ -14,7 +26,9 @@ namespace MSTest
             var result = devia.StdDeviation("3 4 5 5 5 5 6 7 8 9");
             Assert.AreEqual(double.Parse(result), 1.8287822299127, 0.00001);
         }
-
+        /**
+         * @test Testování směrodatné odchylky pro sto celých kladných čísel
+         */
         [TestMethod]
         public void Deviation100num()
         {
@@ -22,6 +36,9 @@ namespace MSTest
             var result = devia.StdDeviation("100 6 25 24 0 59 77 95 68 100 15 82 47 64 18 55 68 5 90 16 68 64 17 60 41 76 87 37 32 78 96 55 12 12 84 47 13 17 91 11 95 21 43 74 97 19 90 12 70 11 49 61 35 9 29 82 66 46 79 86 38 73 46 28 18 22 0 44 45 1 84 19 46 14 50 43 91 10 91 26 56 69 8 41 9 50 89 47 93 2 54 53 53 36 89 17 40 73 16 51");
             Assert.AreEqual(double.Parse(result), 29.791970649011, 0.00001);
         }
+        /**
+         * @test Testování směrodatné odchylky pro tisíc desetiných kladných čísel
+         */
         [TestMethod]
         public void Deviation1000num()
         {

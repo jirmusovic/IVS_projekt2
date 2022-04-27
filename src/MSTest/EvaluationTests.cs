@@ -1,4 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿/**
+ * @file EvaluationTests.cs
+ * @class Evaluation Tests
+ * 
+ * @brief Sada testů pro všechny matematické operace 
+ * 
+ * @date 28-04-2022
+ */
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Calc;
 using System;
 
@@ -8,6 +16,9 @@ namespace MSTest
     [TestClass]
     public class EvaluationTests
     {
+        /**
+         * @test Testování mocniny 
+         */
         [TestMethod]
         public void N_power()
         {
@@ -27,6 +38,9 @@ namespace MSTest
             var result6 = eval.N_power("L^X");
             Assert.AreEqual(null, result6);
         }
+        /**
+         * @test Testování odmocniny 
+         */
         [TestMethod]
         public void N_root()
         {
@@ -43,7 +57,9 @@ namespace MSTest
             var result4 = eval.N_root("f(10000, 0.00000000000000000000000000000000000000000000000000000000001)");
             Assert.IsTrue(double.IsInfinity(double.Parse(result4)));
         }
-
+        /**
+         * @test Testování factoriálu
+         */
         [TestMethod]
         public void Factorial()
         {
@@ -57,7 +73,9 @@ namespace MSTest
             var result2 = eval.Factorial("X!");
             Assert.AreEqual(null, result2);
         }
-
+        /**
+         * @test Testování vyhodnocení výrazu
+         */
         [TestMethod]
         public void Evaluation()
         {
@@ -87,6 +105,9 @@ namespace MSTest
 
 
         }
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na požití přebytečných závorek
+         */
         [TestMethod]
         public void EvaluationTooManyBrackets()
         {
@@ -95,6 +116,9 @@ namespace MSTest
             Assert.AreEqual(null, result);
 
         }
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na požití přebytečných znamének
+         */
         [TestMethod]
         public void EvaluationTooManyOperators()
         {
@@ -103,6 +127,9 @@ namespace MSTest
             Assert.AreEqual(null, result);
 
         }
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na prázdný řetezec
+         */
         [TestMethod]
         public void EvaluationMissingArguments()
         {
@@ -111,7 +138,9 @@ namespace MSTest
             Assert.AreEqual(null, result);
 
         }
-
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na sinus
+         */
         [TestMethod]
         public void EvaluationSin()
         {
@@ -120,7 +149,9 @@ namespace MSTest
             Assert.AreEqual(-0.46945615, double.Parse(result), 0.00001);
 
         }
-
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na sinus špatného argumentu
+         */
         [TestMethod]
         public void EvaluationSinBad()
         {
@@ -129,7 +160,9 @@ namespace MSTest
             Assert.AreEqual(null, result);
 
         }
-
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na cosinus
+         */
         [TestMethod]
         public void EvaluationCos()
         {
@@ -138,7 +171,9 @@ namespace MSTest
             Assert.AreEqual(-1, double.Parse(result), 0.00001);
 
         }
-
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na cosinus špatného argumentu
+         */
         [TestMethod]
         public void EvaluationCosBad()
         {
@@ -147,7 +182,9 @@ namespace MSTest
             Assert.AreEqual(null, result);
 
         }
-
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na tangentu
+         */
         [TestMethod]
         public void EvaluationTan()
         {
@@ -156,7 +193,9 @@ namespace MSTest
             Assert.AreEqual(0, double.Parse(result), 0.00001);
 
         }
-
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na tangentu špatného čísla
+         */
         [TestMethod]
         public void EvaluationTanBad()
         {
@@ -165,7 +204,9 @@ namespace MSTest
             Assert.AreEqual(null, result);
 
         }
-
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na více goniometrických funkcí naráz
+         */
         [TestMethod]
         public void EvaluationGoniometric()
         {
@@ -175,7 +216,9 @@ namespace MSTest
 
 
         }
-
+        /**
+         * @test Testování vyhodnocení výrazu zaměřené pouze na více goniometrických funkcí naráz se špatným argumentem
+         */
         [TestMethod]
         public void EvaluationGoniometricBad()
         {

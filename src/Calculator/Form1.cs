@@ -16,6 +16,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Reflection;
 
 
 namespace Calc
@@ -239,6 +241,17 @@ namespace Calc
             }
         }
 
-       
+        private void HelpButton_Click(object sender, EventArgs e)
+        {  
+            string path = Assembly.GetEntryAssembly().Location;
+            if (path == null)
+                return;
+            int pos = path.IndexOf("\\src\\");
+            path = path.Substring(0, pos + 5);
+            string file = path + "Calculator\\Help.txt";
+            Process.Start("notepad.exe", file);
+
+
+        }
     }
 }
