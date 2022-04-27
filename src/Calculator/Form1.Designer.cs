@@ -93,37 +93,41 @@ namespace Calc
             // 
             // Calculator
             // 
+            this.Calculator.BackgroundImage = global::Calc.Properties.Resources.Calculator_button;
+            this.Calculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Calculator.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Calculator.Location = new System.Drawing.Point(24, 61);
+            this.Calculator.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Calculator.Location = new System.Drawing.Point(24, 57);
             this.Calculator.Margin = new System.Windows.Forms.Padding(4);
             this.Calculator.Name = "Calculator";
-            this.Calculator.Size = new System.Drawing.Size(35, 110);
+            this.Calculator.Size = new System.Drawing.Size(35, 114);
             this.Calculator.TabIndex = 26;
-            this.Calculator.Text = "Calculator";
             this.Calculator.UseVisualStyleBackColor = true;
             this.Calculator.Click += new System.EventHandler(this.Calculator_Click);
             // 
             // Converter
             // 
+            this.Converter.BackgroundImage = global::Calc.Properties.Resources.Converter_button;
+            this.Converter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Converter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Converter.Location = new System.Drawing.Point(24, 178);
             this.Converter.Margin = new System.Windows.Forms.Padding(4);
             this.Converter.Name = "Converter";
             this.Converter.Size = new System.Drawing.Size(35, 110);
             this.Converter.TabIndex = 27;
-            this.Converter.Text = "Converter";
             this.Converter.UseVisualStyleBackColor = true;
             this.Converter.Click += new System.EventHandler(this.Converter_Click);
             // 
             // Deviation
             // 
+            this.Deviation.BackgroundImage = global::Calc.Properties.Resources.Deviation_button;
+            this.Deviation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Deviation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Deviation.Location = new System.Drawing.Point(24, 295);
             this.Deviation.Margin = new System.Windows.Forms.Padding(4);
             this.Deviation.Name = "Deviation";
             this.Deviation.Size = new System.Drawing.Size(35, 110);
             this.Deviation.TabIndex = 28;
-            this.Deviation.Text = "Deviation";
             this.Deviation.UseVisualStyleBackColor = true;
             this.Deviation.Click += new System.EventHandler(this.Deviation_Click);
             // 
