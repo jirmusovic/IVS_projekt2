@@ -55,7 +55,7 @@ namespace Calc
             {
                 foreach(char c in number)
                 {
-                    if (getIndexOf(numList, c, to) == -1)
+                    if(getIndexOf(numList, c, to) == -1)
                         return null;
                 }
                 return number;
@@ -101,8 +101,15 @@ namespace Calc
                 Stack<char> final = new Stack<char>(); /**Výsledná hodnota čísla v požadované bázi*/
                 while (number10Base != 0) //Cyklus pro převod čísla do požadované báze
                 {
-                    final.Push(numList[number10Base % to]);
-                    number10Base /= to;
+                    try
+                    {
+                        final.Push(numList[number10Base % to]);
+                        number10Base /= to;
+                    }
+                    catch
+                    {
+                        return null;
+                    }
                 }
                 string res = String.Empty; /**Výsledné číslo reprezentované jako textový řetězec*/
                 foreach (char c in final)
