@@ -1,0 +1,27 @@
+Pro každou testovací sadu jsme provedli 10 nezávislých testů na jednom referenčním stroji (procesor: i7-6700HQ, paměť RAM: 16 GB)
+1) testovací sada 10 hodnot - průměr:
+	Collecting data: 217,9 tiků procesoru (0 ms)
+	Parsing data: 10902,3 (1 ms)
+	Memory used: 7 MB
+	Calculating data: 2449,2 (0 ms)
+	Number of tested items: 10
+
+2) testovací sada 100 hodnot - průměr:
+	Collecting data: 1143,3 (0 ms)
+	Parsing data: 10808,8 (1 ms)
+	Memory used: 7 MB
+	Calculating data: 2321,9(0 ms)
+	Number of tested items: 100
+
+3)testovací sada 1000 hodnot - průměr:
+	Collecting data: 11282 (2 ms)
+	Parsing data: 11021,1 (1 ms)
+	Memory used: 8 MB
+	Calculating data: 2275,1 (0 ms)
+	Number of tested items: 1000
+
+Shrnutí:
+	Dle našeho názoru není optimalizace nutná, avšak kdybychom museli optimalizovat nějakou část kódu, byla by to část načítání dat.
+
+
+
