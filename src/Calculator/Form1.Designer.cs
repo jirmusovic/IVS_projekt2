@@ -34,6 +34,7 @@ namespace Calc
             this.Converter = new System.Windows.Forms.Button();
             this.Deviation = new System.Windows.Forms.Button();
             this.CalculatorGroupBox = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.InputCalc = new System.Windows.Forms.RichTextBox();
             this.OutputCalc = new System.Windows.Forms.RichTextBox();
             this.Exp10 = new System.Windows.Forms.Button();
@@ -134,6 +135,7 @@ namespace Calc
             // 
             // CalculatorGroupBox
             // 
+            this.CalculatorGroupBox.Controls.Add(this.label5);
             this.CalculatorGroupBox.Controls.Add(this.InputCalc);
             this.CalculatorGroupBox.Controls.Add(this.OutputCalc);
             this.CalculatorGroupBox.Controls.Add(this.Exp10);
@@ -173,6 +175,15 @@ namespace Calc
             this.CalculatorGroupBox.TabIndex = 42;
             this.CalculatorGroupBox.TabStop = false;
             this.CalculatorGroupBox.Text = "Calculator";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.TabIndex = 76;
+            this.label5.Text = "Input:";
             // 
             // InputCalc
             // 
@@ -932,6 +943,7 @@ namespace Calc
             this.HelpButton.TabIndex = 0;
             this.HelpButton.Text = "Help";
             this.HelpButton.UseVisualStyleBackColor = false;
+            this.HelpButton.Click += new System.EventHandler(this.HelpButton_Click);
             // 
             // Form1
             // 
@@ -955,6 +967,7 @@ namespace Calc
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.CalculatorGroupBox.ResumeLayout(false);
+            this.CalculatorGroupBox.PerformLayout();
             this.ConverterGroupBox.ResumeLayout(false);
             this.ConverterGroupBox.PerformLayout();
             this.DeviationGroupBox.ResumeLayout(false);
@@ -1021,6 +1034,7 @@ namespace Calc
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button HelpButton;
+        private System.Windows.Forms.Label label5;
     }
 }
 
