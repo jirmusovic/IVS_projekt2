@@ -1,0 +1,209 @@
+Collecting data: 187(0 ms)
+Parsing data: 9727(0 ms)
+Memory used: 8 MB
+Calculating data: 2105(0 ms)
+Number of tested items: 10
+150,9778865338306
+
+Collecting data: 422(0 ms)
+Parsing data: 10939(1 ms)
+Memory used: 7 MB
+Calculating data: 2070(0 ms)
+Number of tested items: 10
+150,9778865338306
+
+Collecting data: 192(0 ms)
+Parsing data: 12451(1 ms)
+Memory used: 7 MB
+Calculating data: 3893(0 ms)
+Number of tested items: 10
+150,9778865338306
+
+Collecting data: 188(0 ms)
+Parsing data: 12365(1 ms)
+Memory used: 8 MB
+Calculating data: 3377(0 ms)
+Number of tested items: 10
+150,9778865338306
+
+Collecting data: 237(0 ms)
+Parsing data: 10083(1 ms)
+Memory used: 7 MB
+Calculating data: 2053(0 ms)
+Number of tested items: 10
+150,9778865338306
+
+Collecting data: 185(0 ms)
+Parsing data: 13703(1 ms)
+Memory used: 7 MB
+Calculating data: 2151(0 ms)
+Number of tested items: 10
+150,9778865338306
+
+Collecting data: 194(0 ms)
+Parsing data: 10770(1 ms)
+Memory used: 7 MB
+Calculating data: 2604(0 ms)
+Number of tested items: 10
+150,9778865338306
+
+Collecting data: 195(0 ms)
+Parsing data: 9560(0 ms)
+Memory used: 7 MB
+Calculating data: 2059(0 ms)
+Number of tested items: 10
+150,9778865338306
+
+Collecting data: 182(0 ms)
+Parsing data: 9620(0 ms)
+Memory used: 7 MB
+Calculating data: 2064(0 ms)
+Number of tested items: 10
+150,9778865338306
+
+Collecting data: 197(0 ms)
+Parsing data: 9805(0 ms)
+Memory used: 8 MB
+Calculating data: 2116(0 ms)
+Number of tested items: 10
+150,9778865338306
+
+Collecting data: 1114(0 ms)
+Parsing data: 13245(1 ms)
+Memory used: 7 MB
+Calculating data: 2102(0 ms)
+Number of tested items: 100
+152,89748694845025
+
+Collecting data: 1697(0 ms)
+Parsing data: 11617(1 ms)
+Memory used: 7 MB
+Calculating data: 2967(0 ms)
+Number of tested items: 100
+152,89748694845025
+
+Collecting data: 1753(0 ms)
+Parsing data: 10329(1 ms)
+Memory used: 7 MB
+Calculating data: 2068(0 ms)
+Number of tested items: 100
+152,89748694845025
+
+Collecting data: 951(0 ms)
+Parsing data: 9629(0 ms)
+Memory used: 7 MB
+Calculating data: 2124(0 ms)
+Number of tested items: 100
+152,89748694845025
+
+Collecting data: 933(0 ms)
+Parsing data: 9518(0 ms)
+Memory used: 7 MB
+Calculating data: 2055(0 ms)
+Number of tested items: 100
+152,89748694845025
+
+Collecting data: 1147(0 ms)
+Parsing data: 10551(1 ms)
+Memory used: 7 MB
+Calculating data: 2076(0 ms)
+Number of tested items: 100
+152,89748694845025
+
+Collecting data: 939(0 ms)
+Parsing data: 14231(1 ms)
+Memory used: 7 MB
+Calculating data: 3561(0 ms)
+Number of tested items: 100
+152,89748694845025
+
+Collecting data: 996(0 ms)
+Parsing data: 9862(0 ms)
+Memory used: 7 MB
+Calculating data: 2144(0 ms)
+Number of tested items: 100
+152,89748694845025
+
+Collecting data: 955(0 ms)
+Parsing data: 9704(0 ms)
+Memory used: 7 MB
+Calculating data: 2070(0 ms)
+Number of tested items: 100
+152,89748694845025
+
+Collecting data: 948(0 ms)
+Parsing data: 9402(0 ms)
+Memory used: 7 MB
+Calculating data: 2052(0 ms)
+Number of tested items: 100
+152,89748694845025
+
+Collecting data: 9878(0 ms)
+Parsing data: 10119(1 ms)
+Memory used: 7 MB
+Calculating data: 2110(0 ms)
+Number of tested items: 1000
+142,21308426560594
+
+Collecting data: 10709(1 ms)
+Parsing data: 12006(1 ms)
+Memory used: 8 MB
+Calculating data: 2201(0 ms)
+Number of tested items: 1000
+142,21308426560594
+
+Collecting data: 10098(1 ms)
+Parsing data: 11435(1 ms)
+Memory used: 8 MB
+Calculating data: 2188(0 ms)
+Number of tested items: 1000
+142,21308426560594
+
+Collecting data: 9667(0 ms)
+Parsing data: 10157(1 ms)
+Memory used: 8 MB
+Calculating data: 2129(0 ms)
+Number of tested items: 1000
+142,21308426560594
+
+Collecting data: 9950(0 ms)
+Parsing data: 10086(1 ms)
+Memory used: 8 MB
+Calculating data: 2102(0 ms)
+Number of tested items: 1000
+142,21308426560594
+
+Collecting data: 11359(1 ms)
+Parsing data: 11446(1 ms)
+Memory used: 8 MB
+Calculating data: 3282(0 ms)
+Number of tested items: 1000
+142,21308426560594
+
+Collecting data: 11262(1 ms)
+Parsing data: 10502(1 ms)
+Memory used: 8 MB
+Calculating data: 2136(0 ms)
+Number of tested items: 1000
+142,21308426560594
+
+Collecting data: 16615(1 ms)
+Parsing data: 10641(1 ms)
+Memory used: 8 MB
+Calculating data: 2130(0 ms)
+Number of tested items: 1000
+142,21308426560594
+
+Collecting data: 10833(1 ms)
+Parsing data: 10495(1 ms)
+Memory used: 8 MB
+Calculating data: 2152(0 ms)
+Number of tested items: 1000
+142,21308426560594
+
+Collecting data: 12449(1 ms)
+Parsing data: 13324(1 ms)
+Memory used: 8 MB
+Calculating data: 2321(0 ms)
+Number of tested items: 1000
+142,21308426560594

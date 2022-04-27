@@ -1,4 +1,12 @@
-﻿using Calc;
+﻿/**
+ * @file Program.cs
+ * @class Program
+ * 
+ * @brief Vstupní bod programu Profiling
+ * @date 28-04-2022
+ */
+
+using Calc;
 using System;
 using System.Diagnostics;
 

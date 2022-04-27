@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Profiling\\Profiling.csproj": {}
+    "D:\\IVS2\\IVS_projekt2\\src\\Profiling\\Profiling.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj": {
+    "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj",
+        "projectUniqueName": "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj",
         "projectName": "Calc",
-        "projectPath": "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj",
-        "packagesPath": "C:\\Users\\mothv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\obj\\",
+        "projectPath": "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj",
+        "packagesPath": "C:\\Users\\mnova\\.nuget\\packages\\",
+        "outputPath": "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mothv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mnova\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,21 +61,25 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Profiling\\Profiling.csproj": {
+    "D:\\IVS2\\IVS_projekt2\\src\\Profiling\\Profiling.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Profiling\\Profiling.csproj",
+        "projectUniqueName": "D:\\IVS2\\IVS_projekt2\\src\\Profiling\\Profiling.csproj",
         "projectName": "Profiling",
-        "projectPath": "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Profiling\\Profiling.csproj",
-        "packagesPath": "C:\\Users\\mothv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Profiling\\obj\\",
+        "projectPath": "D:\\IVS2\\IVS_projekt2\\src\\Profiling\\Profiling.csproj",
+        "packagesPath": "C:\\Users\\mnova\\.nuget\\packages\\",
+        "outputPath": "D:\\IVS2\\IVS_projekt2\\src\\Profiling\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\mothv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mnova\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,8 +93,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj": {
-                "projectPath": "C:\\Users\\mothv\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj"
+              "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj": {
+                "projectPath": "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj"
               }
             }
           }
@@ -115,7 +123,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

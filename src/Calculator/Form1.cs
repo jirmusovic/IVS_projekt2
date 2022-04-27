@@ -2,6 +2,8 @@
  * @file Form1.cs
  * 
  * @brief Funkce pro interakci s grafickým rozhraním
+ * 
+ * @date 28-04-2022
  */
 
 using System;
@@ -203,5 +205,40 @@ namespace Calc
             else if(InputCalc.Text.Length > 0)
                 InputCalc.Text = "-(" + InputCalc.Text + ")";
         }
+
+        private void NRoot_Click(object sender, EventArgs e)
+        {
+            Button clicked = (Button)sender;
+            if (InputCalc.Text.Length > 0)
+            {
+                char tmp = InputCalc.Text[InputCalc.Text.Length - 1];
+                if (!(tmp == '+' || tmp == '-' || tmp == '*' || tmp == '/' || tmp == '(' || tmp == '/'))
+                {
+                    InputCalc.Text += '*';
+                }
+            }
+            InputCalc.Text += "f(";
+        }
+
+        private void NRoot_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right && InputCalc.Text.Length > 2 && InputCalc.Text[InputCalc.Text.Length - 1] != ',') 
+                InputCalc.Text += ",";
+        }
+
+        private void Convert_Click(object sender, EventArgs e)
+        {
+            if (InConvert.Text != String.Empty && FromBase.Text != String.Empty && ToBase.Text != String.Empty)
+            {
+                Conversion conv = new Conversion();
+                string tmp = conv.Convert_from_to(InConvert.Text, FromBase.Text, ToBase.Text);
+                if (tmp == null)
+                    OutConvert.Text = "ERROR";
+                else
+                    OutConvert.Text = tmp;
+            }
+        }
+
+       
     }
 }

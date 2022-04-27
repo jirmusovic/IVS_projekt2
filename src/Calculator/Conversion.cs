@@ -4,6 +4,7 @@
  *
  *@brief Třída pro převod čísel mezi soustavami
  *
+ *@date 28-04-2022
 */
 
 using System;
@@ -32,8 +33,17 @@ namespace Calc
          */
         public string Convert_from_to(string number, string fromBase, string toBase)
         {
-            int from = int.Parse(fromBase); /**Číselná reprezentace báze, ze které převádíme číslo */
-            int to = int.Parse(toBase); /**Číselná reprezentace báze, do které převádíme číslo */
+            int from; /**Číselná reprezentace báze, ze které převádíme číslo */
+            int to; /**Číselná reprezentace báze, do které převádíme číslo */
+
+            if(int.TryParse(fromBase, out from) == false)
+            {
+                return null;
+            }
+            if (int.TryParse(toBase, out to) == false)
+            {
+                return null;
+            }
             if (from > 36 || to > 36) //Ověření korektního vstupu
             {
                 return null;
