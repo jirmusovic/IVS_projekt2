@@ -52,7 +52,15 @@ namespace Calc
             number = number.ToUpper(); //Převod všech znaků na UpperCase
 
             if (from == to) //V případě shodnosti bází se převod neprovede
+            {
+                foreach(char c in number)
+                {
+                    if (getIndexOf(numList, c, to) == -1)
+                        return null;
+                }
                 return number;
+            }
+                
 
             int number10Base = 0; /**Číslo reprezentované v desítkové bázi*/
             if (from != 10) 
