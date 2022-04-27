@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\MSTest\\MSTest.csproj": {}
+    "D:\\IVS2\\IVS_projekt2\\src\\MSTest\\MSTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj": {
+    "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj",
+        "projectUniqueName": "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj",
         "projectName": "Calc",
-        "projectPath": "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj",
-        "packagesPath": "C:\\Users\\definitely not me\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\obj\\",
+        "projectPath": "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj",
+        "packagesPath": "C:\\Users\\mnova\\.nuget\\packages\\",
+        "outputPath": "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\definitely not me\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mnova\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,20 +65,20 @@
         }
       }
     },
-    "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\MSTest\\MSTest.csproj": {
+    "D:\\IVS2\\IVS_projekt2\\src\\MSTest\\MSTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\MSTest\\MSTest.csproj",
+        "projectUniqueName": "D:\\IVS2\\IVS_projekt2\\src\\MSTest\\MSTest.csproj",
         "projectName": "MSTest",
-        "projectPath": "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\MSTest\\MSTest.csproj",
-        "packagesPath": "C:\\Users\\definitely not me\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\MSTest\\obj\\",
+        "projectPath": "D:\\IVS2\\IVS_projekt2\\src\\MSTest\\MSTest.csproj",
+        "packagesPath": "C:\\Users\\mnova\\.nuget\\packages\\",
+        "outputPath": "D:\\IVS2\\IVS_projekt2\\src\\MSTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\definitely not me\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mnova\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -93,8 +93,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj": {
-                "projectPath": "C:\\Users\\definitely not me\\source\\repos\\jirmusovic\\IVS_projekt2\\src\\Calculator\\Calc.csproj"
+              "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj": {
+                "projectPath": "D:\\IVS2\\IVS_projekt2\\src\\Calculator\\Calc.csproj"
               }
             }
           }

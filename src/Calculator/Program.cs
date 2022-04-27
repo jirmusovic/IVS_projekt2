@@ -3,6 +3,8 @@
  * @class Program
  * 
  * @brief Vstupní bod programu
+ * 
+ * @date 28-04-2022
  */
 
 using System;

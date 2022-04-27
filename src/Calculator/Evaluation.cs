@@ -4,7 +4,7 @@
  * 
  * @brief Třída pro vyhodnocení matematických výrazů
  * 
- * @date 
+ * @date 28-04-2022
  */
 
 using System;
