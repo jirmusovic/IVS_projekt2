@@ -223,5 +223,20 @@ namespace Calc
             if (e.Button == MouseButtons.Right && InputCalc.Text.Length > 2 && InputCalc.Text[InputCalc.Text.Length - 1] != ',') 
                 InputCalc.Text += ",";
         }
+
+        private void Convert_Click(object sender, EventArgs e)
+        {
+            if (InConvert.Text != String.Empty && FromBase.Text != String.Empty && ToBase.Text != String.Empty)
+            {
+                Conversion conv = new Conversion();
+                string tmp = conv.Convert_from_to(InConvert.Text, FromBase.Text, ToBase.Text);
+                if (tmp == null)
+                    OutConvert.Text = "ERROR";
+                else
+                    OutConvert.Text = tmp;
+            }
+        }
+
+       
     }
 }
