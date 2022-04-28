@@ -2,7 +2,7 @@
  * @file Program.cs
  * @class Program
  * 
- * @brief Vstupní bod programu
+ * @brief VstupnÃ­ bod programu
  * 
  * @date 28-04-2022
  */
@@ -28,7 +28,7 @@ namespace Calc
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1()); //Spuštìní formuláøe
+            Application.Run(new Form1()); //SpuÅ¡tÄ›nÃ­ formulÃ¡Å™e
         }
     }
 }

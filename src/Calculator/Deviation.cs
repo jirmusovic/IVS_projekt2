@@ -4,6 +4,7 @@
  * @brief Třída obsahující funkce pro výpočet výběrové směrodatné odchylky
  * 
  * @date 28-04-2022
+ * @author xnovak3g, xjirmu00
  */
 
 

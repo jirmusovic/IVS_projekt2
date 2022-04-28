@@ -4,6 +4,8 @@
  * 
  * @brief Vstupní bod programu Profiling
  * @date 28-04-2022
+ * 
+ * @author xnovak3g, xjirmu00
  */
 
 using System;

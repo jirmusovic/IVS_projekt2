@@ -4,6 +4,8 @@
  *@brief Třída pro převod čísel mezi soustavami
  *
  *@date 28-04-2022
+ *
+ *@author xnovak3g, xmothe00
 */
 
 using System;

@@ -5,6 +5,7 @@
  * @brief Sada testů pro směrodatnou odchylku
  * 
  * @date 28-04-2022
+ * @author xmothe00
  */
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
