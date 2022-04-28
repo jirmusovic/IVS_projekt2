@@ -2,7 +2,7 @@
  * @file ConversionTests.cs
  * @class ConversionTest
  * 
- * @brief Sada testù pro pøevod mezi èíselnımi soustavami
+ * @brief Sada testÅ¯ pro pÅ™evod mezi ÄÃ­selnÃ½mi soustavami
  * 
  * @date 28-04-2022
  */
@@ -16,7 +16,7 @@ namespace MSTest
     public class ConversionTests
     {
         /**
-         * @test Testování pøevodù z desítkové do osmièkové soustavy
+         * @test TestovÃ¡nÃ­ pÅ™evodÅ¯ z desÃ­tkovÃ© do osmiÄkovÃ© soustavy
          */
         [TestMethod]
         public void From10base()
@@ -26,7 +26,7 @@ namespace MSTest
             Assert.IsTrue(result == "400");
         }
         /**
-         * @test Testování pøevodù z desítkové do osmièkové soustavy se špatnì zadanou vstupní hodnotou
+         * @test TestovÃ¡nÃ­ pÅ™evodÅ¯ z desÃ­tkovÃ© do osmiÄkovÃ© soustavy se Å¡patnÄ› zadanou vstupnÃ­ hodnotou
          */
         [TestMethod]
         public void From10baseBad()
@@ -36,7 +36,7 @@ namespace MSTest
             Assert.IsTrue(result == null);
         }
         /**
-         * @test Testování pøevodù z dvojkové do desítkové soustavy
+         * @test TestovÃ¡nÃ­ pÅ™evodÅ¯ z dvojkovÃ© do desÃ­tkovÃ© soustavy
          */
         [TestMethod]
         public void From2base()
@@ -46,7 +46,7 @@ namespace MSTest
             Assert.IsTrue(result == "32537631");
         }
         /**
-         * @test Testování pøevodù z dvojkové do desítkové soustavy se špatnì zadanou vstupní hodnotou
+         * @test TestovÃ¡nÃ­ pÅ™evodÅ¯ z dvojkovÃ© do desÃ­tkovÃ© soustavy se Å¡patnÄ› zadanou vstupnÃ­ hodnotou
          */
         [TestMethod]
         public void From2baseBad()
@@ -56,7 +56,7 @@ namespace MSTest
             Assert.IsTrue(result == null);
         }
         /**
-         * @test Testování pøevodù z šestnáctkové do dvojkové soustavy
+         * @test TestovÃ¡nÃ­ pÅ™evodÅ¯ z Å¡estnÃ¡ctkovÃ© do dvojkovÃ© soustavy
          */
         [TestMethod]
         public void From16base()
@@ -66,7 +66,7 @@ namespace MSTest
             Assert.IsTrue(result == "11111111100010011110");
         }
         /**
-         * @test Testování pøevodù z šestnáctkové do dvojkové soustavy se špatnì zadanou vstupní hodnotou
+         * @test TestovÃ¡nÃ­ pÅ™evodÅ¯ z Å¡estnÃ¡ctkovÃ© do dvojkovÃ© soustavy se Å¡patnÄ› zadanou vstupnÃ­ hodnotou
          */
         [TestMethod]
         public void From16baseBad()
@@ -76,7 +76,7 @@ namespace MSTest
             Assert.IsTrue(result == null);
         }
         /**
-         * @test Testování pøevodù z šestnáctkové do dvojkové soustavy
+         * @test TestovÃ¡nÃ­ pÅ™evodÅ¯ z Å¡estnÃ¡ctkovÃ© do dvojkovÃ© soustavy
          */
         [TestMethod]
         public void Fromrandom1()
@@ -86,7 +86,7 @@ namespace MSTest
             Assert.IsTrue(result == "13615");
         }
         /**
-         * @test Testování pøevodù z tøícetipìtkové do tøicetišestkové soustavy se špatnì zadanou vstupní hodnotou
+         * @test TestovÃ¡nÃ­ pÅ™evodÅ¯ z tÅ™Ã­cetipÄ›tkovÃ© do tÅ™icetiÅ¡estkovÃ© soustavy se Å¡patnÄ› zadanou vstupnÃ­ hodnotou
          */
         [TestMethod]
         public void Fromrandom2bad()
@@ -96,7 +96,7 @@ namespace MSTest
             Assert.IsTrue(result == null);
         }
         /**
-         * @test Testování pøevodù z desítkové báze do desítkové baze se špatnì zadanou vstupní hodnotou
+         * @test TestovÃ¡nÃ­ pÅ™evodÅ¯ z desÃ­tkovÃ© bÃ¡ze do desÃ­tkovÃ© baze se Å¡patnÄ› zadanou vstupnÃ­ hodnotou
          */
         [TestMethod]
         public void Fromrandom3bad()
