@@ -1,6 +1,7 @@
 TEST = MSTest
 CALC = Calculator
 PROF = Profiling
+INS = Calc_Installer
 RMDIR = rd /s /q
 
 .SILENT: all
@@ -45,5 +46,6 @@ clean:
 	if exist "$(PROF)/bin" $(RMDIR) "$(PROF)/bin"
 	if exist "$(PROF)/obj" $(RMDIR) "$(PROF)/obj"
 	
-
+	if exist "$(INS)/Debug" $(RMDIR) "$(INS)/Debug"
+	if exist "$(INS)/Release" $(RMDIR) "$(INS)/Release"
 	
