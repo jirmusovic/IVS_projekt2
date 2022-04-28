@@ -705,6 +705,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_652E1BAEABBE4AC0AAAE869480EC2788"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_66EB68BCD0994B3F8A5F2D73E69561CC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1816,6 +1822,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -4134,6 +4148,26 @@
             "TargetName" = "8:classes_6.html"
             "Tag" = "8:"
             "Folder" = "8:_103EAC242A40437DACFEBF83D12F4267"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_652E1BAEABBE4AC0AAAE869480EC2788"
+            {
+            "SourcePath" = "8:..\\..\\dokumentace.pdf"
+            "TargetName" = "8:dokumentace.pdf"
+            "Tag" = "8:"
+            "Folder" = "8:_3CD1E4F3D3614F3087C84CC31C124745"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -8303,7 +8337,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_671C46BFA03044B09F151FC72DF6F1D0"
             {
-            "SourcePath" = "8:..\\Profiling\\obj\\Debug\\netcoreapp3.1\\apphost.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_1D41E2531E694B1EA1AA29EE28954892"
@@ -8331,7 +8365,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A91305D7C2974F59AC96D0F6F5766755"
             {
-            "SourcePath" = "8:..\\Calculator\\obj\\Debug\\netcoreapp3.1\\apphost.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C2CFFD98754741C69649D1A7FA93975A"
