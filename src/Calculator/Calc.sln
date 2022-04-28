@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSTest", "..\MSTest\MSTest.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Profiling", "..\Profiling\Profiling.csproj", "{8351FB20-3A5B-4BDD-97B2-AE33D3D38C6D}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Calc Installer", "..\Calc Installer\Calc Installer.vdproj", "{2F019911-6AB8-4A98-B3C6-4676AD9AB925}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Calc_Installer", "..\Calc_Installer\Calc_Installer.vdproj", "{828B2F8F-5ABA-4AAC-93D4-C251CD9DE8B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,8 +29,8 @@ Global
 		{8351FB20-3A5B-4BDD-97B2-AE33D3D38C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8351FB20-3A5B-4BDD-97B2-AE33D3D38C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8351FB20-3A5B-4BDD-97B2-AE33D3D38C6D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F019911-6AB8-4A98-B3C6-4676AD9AB925}.Debug|Any CPU.ActiveCfg = Debug
-		{2F019911-6AB8-4A98-B3C6-4676AD9AB925}.Release|Any CPU.ActiveCfg = Release
+		{828B2F8F-5ABA-4AAC-93D4-C251CD9DE8B0}.Debug|Any CPU.ActiveCfg = Debug
+		{828B2F8F-5ABA-4AAC-93D4-C251CD9DE8B0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

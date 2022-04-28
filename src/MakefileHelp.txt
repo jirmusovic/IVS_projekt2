@@ -1,0 +1,24 @@
+-Pred spustenim specifickych cilu make overte, zda mate v pocitaci nainstalovany potrebne nastroje (jsou vzdy uvedeny u popisu jednotlivych cilu)
+
+-pozn. Verze dotnet SDK musi byt alespon verze 3.1.0 a vys
+
+-Makefile cile
+	all (spusti progam) - vyzaduje dotnet
+	pack (zabali projekt tak, aby mohl byt odevzdan) - vyzaduje nainstalovany nastroj 7zip (a cestu k nemu v globalnich promennych)
+	clean (smaze vsechny soubory, co nemaji byt odevzdany)
+	run (spusti program) - vyzaduje dotnet
+	profile (spusti program pro vypocet smerodatne odchylky s ukazkovym testovacim vstupem) - vyzaduje dotnet
+	help (vypise napovedu s popisem, co je potreba udelat pred spustenim programu)
+	
+-Projekt je dale mozne spustit pres vyvojove prostredi Visual Studio (funkcnost overena na verzi VS19 a VS22). Pro spusteni je treba
+ otevrit reseni projektu Calc.sln umistene ve slozce src/Calculator. Pote je nutne doinstalovat potrebnou verzi .NET Core.
+-Spusteni kalkulacky ve VS:
+	-Pravym klikem mysi na projekt "Calc" v pruzkumnikovi reseni vybereme moznost "Nastavit jako projekt pro spusteni", dale klikneme 
+	 na zalozku "Ladit" v horni liste nastroju a vybereme "Spustit ladeni" pro spusteni pomoci debuggeru (zarazky si musime vytvorit pre spustenim), 
+         nebo "Spustit bez ladeni" pro spusteni bez debuggeru
+-Spusteni Profilingu ve VS:
+	-Postup stejny jak u kalkulacky, jen jako projekt na spusteni zvolime "Profiling"
+-Spusteni Testu ve VS:
+	-V horni liste nastroju klikneme na zalozku "Test" a zvolime moznost "Pruzkumnik testu" - zde mame moznost spusti vsechny testy najednou, 
+	 nebo si muzeme vybrat jednotlive testy
+

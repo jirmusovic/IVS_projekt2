@@ -1,39 +1,49 @@
+TEST = MSTest
+CALC = Calculator
+PROF = Profiling
+RMDIR = rd /s /q
+
+.SILENT: all
 .PHONY: all
 all: run
 
+.SILENT: run
 .PHONY: run
 run: 
 	dotnet run --project Calculator/
 
+.SILENT: test
 .PHONY:  test
 test:
-	dotnet test ./MSTest/MSTest.csproj
+	dotnet test ./$(TEST)/$(TEST).csproj
 
+.SILENT: profile
 .PHONY: profile
 profile: 
-	dotnet run --project Profiling/ <Profiling/testInput.txt
-	
+	dotnet run --project $(PROF)/ <$(PROF)/testInput.txt
+
+.SILENT: help
 .PHONY: help
 help:
-	
+	type MakefileHelp.txt
+
 .PHONY: pack
 pack: clean
-	zip ../../xjirmu00_xmothe00_xnovak3g_xkostr09.zip -r ../../*
+	7z a -tzip ../../xjirmu00_xmothe00_xnovak3g_xkostr09.zip -r ../../*
 	
 .PHONY: clean
 clean:
-	#dotnet clean ./Calculator
-	rm -rf Calculator/TestResults/
-	rm -rf Calculator/bin/
-	rm -rf Calculator/obj/
-	rm -rf Calculator/.vs/
+	if exist "$(CALC)/TestResults" $(RMDIR) "$(CALC)/TestResults"
+	if exist "$(CALC)/bin" $(RMDIR) "$(CALC)/bin"
+	if exist "$(CALC)/obj" $(RMDIR) "$(CALC)/obj"
+	if exist "$(CALC)/.vs" $(RMDIR) "$(CALC)/.vs"
 	
-	rm -rf MSTest/TestResults/
-	rm -rf MSTest/bin/
-	rm -rf MSTest/obj/
+	if exist "$(TEST)/TestResults" $(RMDIR) "$(TEST)/TestResults"
+	if exist "$(TEST)/bin" $(RMDIR) "$(TEST)/bin"
+	if exist "$(TEST)/obj" $(RMDIR) "$(TEST)/obj"
 	
-	rm -rf Profiling/bin/
-	rm -rf Profiling/obj/
+	if exist "$(PROF)/bin" $(RMDIR) "$(PROF)/bin"
+	if exist "$(PROF)/obj" $(RMDIR) "$(PROF)/obj"
 	
-	rm -rf Calc\ Installer
+
 	
