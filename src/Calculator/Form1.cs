@@ -64,16 +64,6 @@ namespace Calc
                 Switch_active_window((int)Window.DEVIATION);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void output_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void number_click(object sender, EventArgs e)
         {
             Button clicked = (Button)sender;
@@ -242,7 +232,12 @@ namespace Calc
         }
 
         private void HelpButton_Click(object sender, EventArgs e)
-        {  
+        {
+            if (File.Exists("Help.txt"))
+            {
+                Process.Start("notepad.exe", "Help.txt");
+                return;
+            }
             string path = Assembly.GetEntryAssembly().Location;
             if (path == null)
                 return;

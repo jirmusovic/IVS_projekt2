@@ -6,9 +6,7 @@
  * @date 28-04-2022
  */
 
-using Calc;
 using System;
-using System.Diagnostics;
 
 namespace Profiling
 {
@@ -30,13 +28,14 @@ namespace Profiling
             }
             if (input != String.Empty)
             {
-                Deviation dev = new Deviation();
+                Calc.Deviation dev = new Calc.Deviation();
 
                 res = dev.StdDeviation(input);
                 if (res != null) //Ověření správného výsledku operace
                     Console.WriteLine(res);
                 else
                     Console.WriteLine("Chyba vstupu!");
+
             }
         }
     }

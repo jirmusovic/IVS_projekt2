@@ -1,6 +1,5 @@
 ﻿/**
  *@file Conversion.cs
- *@class Conversion
  *
  *@brief Třída pro převod čísel mezi soustavami
  *
@@ -9,10 +8,13 @@
 
 using System;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace Calc
 {
+    /**
+     * @class Třída pro převod čísel mezi soustavami
+     */
     public class Conversion
     {
         private char[] numList = new char[] {   '0', '1', '2', '3', '4', '5',

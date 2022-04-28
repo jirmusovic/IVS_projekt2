@@ -211,7 +211,6 @@ namespace Calc
             this.OutputCalc.Size = new System.Drawing.Size(437, 58);
             this.OutputCalc.TabIndex = 43;
             this.OutputCalc.Text = "";
-            this.OutputCalc.TextChanged += new System.EventHandler(this.output_TextChanged);
             // 
             // Exp10
             // 
@@ -965,7 +964,6 @@ namespace Calc
             this.MinimumSize = new System.Drawing.Size(720, 500);
             this.Name = "Form1";
             this.Text = "Calculator";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.CalculatorGroupBox.ResumeLayout(false);
             this.CalculatorGroupBox.PerformLayout();
             this.ConverterGroupBox.ResumeLayout(false);

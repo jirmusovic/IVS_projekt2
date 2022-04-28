@@ -1,6 +1,5 @@
 ﻿/**
  * @file Evaluation.cs
- * @class Evaluation
  * 
  * @brief Třída pro vyhodnocení matematických výrazů
  * 
@@ -12,6 +11,9 @@ using System.Data;
 
 namespace Calc
 {
+    /**
+     * @class Třída pro vyhodnocení matematických výrazů
+     */
     public class Evaluation
     {
         /**
