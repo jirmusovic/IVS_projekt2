@@ -3,6 +3,8 @@
  * 
  * @brief Třída pro vyhodnocení matematických výrazů
  * 
+ * @author xnovak3g
+ * 
  * @date 28-04-2022
  */
 
