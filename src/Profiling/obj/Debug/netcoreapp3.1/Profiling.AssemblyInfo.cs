@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Profiling")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("stddev")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Profiling")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Profiling")]
+[assembly: System.Reflection.AssemblyProductAttribute("stddev")]
+[assembly: System.Reflection.AssemblyTitleAttribute("stddev")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Vygenerované třídou WriteCodeFragment nástroje MSBuild
