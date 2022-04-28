@@ -1,4 +1,4 @@
-xlogin01 100 (základ GUI a základní mat. operace)
-xlogin02 100 (pokročilé mat. operace)
-xlogin03 90 (profiling, instalátor)
-xlogin04 110 (testy, dokumentace)
+xnovak3g 140 (mat. operace, kód, úprava makefile, instalace)
+xmothe00 120 (testy, kód, korekce)
+xjirmu00 130 (GUI, makefile, kód, dokumentace)
+xkostr09 10 (doxyfile)
