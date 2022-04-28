@@ -11,7 +11,7 @@ Projekt se dá zprovoznít přes vývojové prostředí Visual Studio otevření
 Autoři
 ------
 
-Název týmu
+WISe team
 - xjirmu00 Veronika Jirmusová
 - xmothe00 Vojtěch Mothejzik 
 - xkostr09 Jan Kostrhun
