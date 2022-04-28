@@ -3,6 +3,11 @@ Prostředí
 
 Windows 64bit
 
+Zprovoznění
+-----------
+
+Projekt se dá zprovoznít přes vývojové prostředí Visual Studio otevřením řešení projektu Calc.sln v adresáři src/Calculator.
+
 Autoři
 ------
 
