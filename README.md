@@ -1,18 +1,23 @@
-Prostredi
+Prostředí
 ---------
 
 Windows 64bit
 
-Autori
+Zprovoznění
+-----------
+
+Projekt se dá zprovoznít přes vývojové prostředí Visual Studio otevřením řešení projektu Calc.sln v adresáři src/Calculator.
+
+Autoři
 ------
 
-Nazev tymu
-- xjirmu00 Veronika Jirmusova
-- xmothe00 Vojtech Mothejzik 
+Název týmu
+- xjirmu00 Veronika Jirmusová
+- xmothe00 Vojtěch Mothejzik 
 - xkostr09 Jan Kostrhun
-- xnovak3g Michal Novak 
+- xnovak3g Michal Novák 
 
 Licence
 -------
 
-Tento program je poskytovan pod licenci GNU GPL v. 3.
+Tento program je poskytován pod licencí GNU GPL v. 3.

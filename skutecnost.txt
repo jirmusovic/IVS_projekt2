@@ -1,1 +1,22 @@
-tento soubor bude obsahovat rozdil mezi planem projektu a skutecnosti
+Bohužel jsme velmi podcenili situaci a neodhadli, co nám kolik času zabere. Dále jsme díky velkému množství času, který na projekt byl dán, neustále odkládali všechny jednotlivé části, čímž jsme se dostali do cca týdenního skluzu.
+Porovnání naplánovaných a skutečných termínů:
+Testy
+  plán: 31.3
+  skutečnost: 4.4
+Výběr matematických operací:
+  plán: 31.3
+  skutečnost 31.3
+Kód:
+  plán: 14.4
+  skutečnost: 25.4
+GUI:
+  plán: 14.4
+  skutečnost: 20.4
+makefile:
+  plán: 21.4
+  skutečnost: 27.4
+testování:
+  plán: 22.-27.4
+  skutečnost: 15.-22.4
+  
+  Projekt jsme nakonec i se skluzem stihli.
